@@ -1,0 +1,150 @@
+{
+  "deploy_terraform": false,
+  "deploy_all_services": false,
+  "data": [
+    {
+      "parent_folder": "apps",
+      "service_name": "web-app",
+      "deploy": false,
+      "dockerfile": "NextJS_ECS_Dockerfile",
+      "build_scripts": [
+        "touch .env",
+        "if [ -f web-app.env.${ENVIRONMENT} ]; then cat web-app.env.${ENVIRONMENT} >> .env; else echo 'Error: web-app.env.${ENVIRONMENT} does not exist.' && exit 1; fi",
+        "cat .env",
+        "npx env-cmd -f .env nx run web-app:build --skip-nx-cache",
+        "docker build --no-cache --build-arg PARENT_FOLDER=${PARENT_FOLDER} --build-arg SERVICE_NAME=${SERVICE_NAME} -t ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} -f ${DOCKERFILE} .",
+        "docker tag ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "aws ecs update-service --cluster ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}-cluster --service ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} --force-new-deployment"
+      ]
+    },
+    {
+      "parent_folder": "apps/user",
+      "service_name": "user-api-service",
+      "deploy": true,
+      "dockerfile": "NestJS_AWSLambda_Dockerfile",
+      "build_scripts": [
+        "npm run build-user-api-service",
+        "npm run post-build-user-api-service",
+        "cd dist/${PARENT_FOLDER}/${SERVICE_NAME} && yarn install",
+        " cd ../../../..",
+        "docker build --no-cache --build-arg PARENT_FOLDER=${PARENT_FOLDER} --build-arg SERVICE_NAME=${SERVICE_NAME} -t ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} -f ${DOCKERFILE} .",
+        "docker tag ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "aws lambda update-function-code --function-name ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} --image-uri ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest"
+      ]
+    },
+    {
+      "parent_folder": "apps/authentication",
+      "service_name": "authentication-api-service",
+      "deploy": true,
+      "dockerfile": "NestJS_AWSLambda_Dockerfile",
+      "build_scripts": [
+        "npm run build-authentication-api-service",
+        "npm run post-build-authentication-api-service",
+        "cd dist/${PARENT_FOLDER}/${SERVICE_NAME} && yarn install",
+        " cd ../../../..",
+        "docker build --no-cache --build-arg PARENT_FOLDER=${PARENT_FOLDER} --build-arg SERVICE_NAME=${SERVICE_NAME} -t ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} -f ${DOCKERFILE} .",
+        "docker tag ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "aws lambda update-function-code --function-name ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} --image-uri ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest"
+      ]
+    },
+    {
+      "parent_folder": "apps/misc",
+      "service_name": "cognito-custom-message-service",
+      "deploy": true,
+      "dockerfile": "NestJS_AWSLambda_Dockerfile",
+      "build_scripts": [
+        "npm run build-cognito-custom-message-service",
+        "npm run post-build-cognito-custom-message-service",
+        "cd dist/${PARENT_FOLDER}/${SERVICE_NAME} && yarn install",
+        " cd ../../../..",
+        "docker build --no-cache --build-arg PARENT_FOLDER=${PARENT_FOLDER} --build-arg SERVICE_NAME=${SERVICE_NAME} -t ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} -f ${DOCKERFILE} .",
+        "docker tag ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "aws lambda update-function-code --function-name ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} --image-uri ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest"
+      ]
+    },
+    {
+      "parent_folder": "apps/misc",
+      "service_name": "file-api-service",
+      "deploy": true,
+      "dockerfile": "NestJS_AWSLambda_Dockerfile",
+      "build_scripts": [
+        "npm run build-file-api-service",
+        "npm run post-build-file-api-service",
+        "cd dist/${PARENT_FOLDER}/${SERVICE_NAME} && yarn install",
+        " cd ../../../..",
+        "docker build --no-cache --build-arg PARENT_FOLDER=${PARENT_FOLDER} --build-arg SERVICE_NAME=${SERVICE_NAME} -t ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} -f ${DOCKERFILE} .",
+        "docker tag ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "aws lambda update-function-code --function-name ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} --image-uri ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest"
+      ]
+    },
+    {
+      "parent_folder": "apps/misc",
+      "service_name": "email-api-service",
+      "deploy": true,
+      "dockerfile": "NestJS_AWSLambda_Dockerfile",
+      "build_scripts": [
+        "npm run build-email-api-service",
+        "npm run post-build-email-api-service",
+        "cd dist/${PARENT_FOLDER}/${SERVICE_NAME} && yarn install",
+        " cd ../../../..",
+        "docker build --no-cache --build-arg PARENT_FOLDER=${PARENT_FOLDER} --build-arg SERVICE_NAME=${SERVICE_NAME} -t ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} -f ${DOCKERFILE} .",
+        "docker tag ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "aws lambda update-function-code --function-name ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} --image-uri ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest"
+      ]
+    },
+    {
+      "parent_folder": "apps/misc",
+      "service_name": "email-template-api-service",
+      "deploy": true,
+      "dockerfile": "NestJS_AWSLambda_Dockerfile",
+      "build_scripts": [
+        "npm run build-email-template-api-service",
+        "npm run post-build-email-template-api-service",
+        "cd dist/${PARENT_FOLDER}/${SERVICE_NAME} && yarn install",
+        " cd ../../../..",
+        "docker build --no-cache --build-arg PARENT_FOLDER=${PARENT_FOLDER} --build-arg SERVICE_NAME=${SERVICE_NAME} -t ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} -f ${DOCKERFILE} .",
+        "docker tag ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "aws lambda update-function-code --function-name ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} --image-uri ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest"
+      ]
+    },
+    {
+      "parent_folder": "apps/user",
+      "service_name": "user-event-handler-service",
+      "deploy": true,
+      "dockerfile": "NestJS_AWSLambda_Dockerfile",
+      "build_scripts": [
+        "npm run build-user-event-handler-service",
+        "npm run post-build-user-event-handler-service",
+        "cd dist/${PARENT_FOLDER}/${SERVICE_NAME} && yarn install",
+        " cd ../../../..",
+        "docker build --no-cache --build-arg PARENT_FOLDER=${PARENT_FOLDER} --build-arg SERVICE_NAME=${SERVICE_NAME} -t ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} -f ${DOCKERFILE} .",
+        "docker tag ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "aws lambda update-function-code --function-name ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} --image-uri ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest"
+      ]
+    },
+    {
+      "parent_folder": "apps/user",
+      "service_name": "user-event-2-handler-service",
+      "deploy": true,
+      "dockerfile": "NestJS_AWSLambda_Dockerfile",
+      "build_scripts": [
+        "npm run build-user-event-2-handler-service",
+        "npm run post-build-user-event-2-handler-service",
+        "cd dist/${PARENT_FOLDER}/${SERVICE_NAME} && yarn install",
+        " cd ../../../..",
+        "docker build --no-cache --build-arg PARENT_FOLDER=${PARENT_FOLDER} --build-arg SERVICE_NAME=${SERVICE_NAME} -t ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} -f ${DOCKERFILE} .",
+        "docker tag ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest",
+        "aws lambda update-function-code --function-name ${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME} --image-uri ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}-${ENVIRONMENT}-${SERVICE_NAME}:latest"
+      ]
+    }
+  ]
+}

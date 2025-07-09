@@ -1,0 +1,5 @@
+# Ignore next-swc native binary
+node_modules/@next/swc-*/next-swc.*.node
+
+# Ignore all Terraform provider binaries in dev folders
+terraform/dev/**/terraform-provider-aws_*
