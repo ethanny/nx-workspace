@@ -1,6 +1,5 @@
 import { Entity } from "dynamodb-onetable";
 
-
 export const UserSchema = {
     version: '0.0.1',
     indexes: {

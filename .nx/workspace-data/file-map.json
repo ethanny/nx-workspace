@@ -1,0 +1,5272 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.0.0",
+  "pathMappings": {
+    "@api-service-lib": [
+      "libs/backend/api-service-lib/src/index.ts"
+    ],
+    "@auth-guard-lib": [
+      "libs/backend/auth-guard-lib/src/index.ts"
+    ],
+    "@aws-cognito-lib": [
+      "libs/backend/aws-services/aws-cognito-lib/src/index.ts"
+    ],
+    "@aws-s3-lib": [
+      "libs/backend/aws-services/aws-s3-lib/src/index.ts"
+    ],
+    "@aws-secret-manager-lib": [
+      "libs/backend/aws-services/aws-secret-manager-lib/src/index.ts"
+    ],
+    "@aws-ses-lib": [
+      "libs/backend/aws-services/aws-ses-lib/src/index.ts"
+    ],
+    "@aws-sns-lib": [
+      "libs/backend/aws-services/aws-sns-lib/src/index.ts"
+    ],
+    "@aws-sqs-lib": [
+      "libs/backend/aws-services/aws-sqs-lib/src/index.ts"
+    ],
+    "@components-types/*": [
+      "libs/frontend/components-web/src/types/*"
+    ],
+    "@components-web": [
+      "libs/frontend/components-web/src/index.ts"
+    ],
+    "@components-web/*": [
+      "libs/frontend/components-web/src/*"
+    ],
+    "@configuration-lib": [
+      "libs/backend/configuration-lib/src/index.ts"
+    ],
+    "@data-access/*": [
+      "libs/frontend/data-access/src/*"
+    ],
+    "@dto": [
+      "libs/dto/src/index.ts"
+    ],
+    "@dynamo-db-lib": [
+      "libs/backend/dynamo-db-lib/src/index.ts"
+    ],
+    "@email-template-database-service": [
+      "libs/backend/database-services/email-template-database-service/src/index.ts"
+    ],
+    "@message-queue-lib": [
+      "libs/backend/message-queue-lib/src/index.ts"
+    ],
+    "@ui-config": [
+      "libs/frontend/ui-config/src/index.ts"
+    ],
+    "@ui-config/*": [
+      "libs/frontend/ui-config/src/*"
+    ],
+    "@user-database-service": [
+      "libs/backend/database-services/user-database-service/src/index.ts"
+    ],
+    "@utils/*": [
+      "libs/utils/src/*"
+    ],
+    "@web-app/*": [
+      "apps/web-app/src/*"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview"
+      }
+    },
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "name": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    },
+    {
+      "name": "@nx/next/plugin",
+      "options": {
+        "startTargetName": "start",
+        "buildTargetName": "build",
+        "devTargetName": "dev",
+        "serveStaticTargetName": "serve-static"
+      }
+    },
+    {
+      "name": "@nx/storybook/plugin",
+      "options": {
+        "serveStorybookTargetName": "storybook",
+        "buildStorybookTargetName": "build-storybook",
+        "testStorybookTargetName": "test-storybook",
+        "staticStorybookTargetName": "static-storybook"
+      }
+    },
+    {
+      "name": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview"
+      }
+    },
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "name": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    },
+    {
+      "name": "@nx/next/plugin",
+      "options": {
+        "startTargetName": "start",
+        "buildTargetName": "build",
+        "devTargetName": "dev",
+        "serveStaticTargetName": "serve-static"
+      }
+    },
+    {
+      "name": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static",
+        "typecheckTargetName": "typecheck"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "aws-ses-lib": [
+        {
+          "file": "libs/backend/aws-services/aws-ses-lib/README.md",
+          "hash": "17698541615435802103"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-ses-lib/eslint.config.js",
+          "hash": "2093890615893252868"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-ses-lib/project.json",
+          "hash": "10555518875118218490"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-ses-lib/src/index.ts",
+          "hash": "661865059751060102"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-ses-lib/src/lib/aws-ses-lib.module.ts",
+          "hash": "2792841127021542720",
+          "deps": [
+            "configuration-lib",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-ses-lib/src/lib/aws-ses-lib.service.ts",
+          "hash": "8288185758043998288",
+          "deps": [
+            "npm:@aws-sdk/client-ses",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:nodemailer"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-ses-lib/tsconfig.json",
+          "hash": "7145357875665239830"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-ses-lib/tsconfig.lib.json",
+          "hash": "15041050237027733832"
+        }
+      ],
+      "api-service-lib": [
+        {
+          "file": "libs/backend/api-service-lib/README.md",
+          "hash": "9547721864424416277"
+        },
+        {
+          "file": "libs/backend/api-service-lib/eslint.config.js",
+          "hash": "11841079831973943732"
+        },
+        {
+          "file": "libs/backend/api-service-lib/jest.config.ts",
+          "hash": "13040910884561845073"
+        },
+        {
+          "file": "libs/backend/api-service-lib/project.json",
+          "hash": "11206072027358514739"
+        },
+        {
+          "file": "libs/backend/api-service-lib/src/index.ts",
+          "hash": "16805499387332648999"
+        },
+        {
+          "file": "libs/backend/api-service-lib/src/lib/api-service-lib.module.ts",
+          "hash": "539909839775228301",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/api-service-lib/src/lib/api-service-lib.service.spec.ts",
+          "hash": "12737740920485018774",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "libs/backend/api-service-lib/src/lib/api-service-lib.service.ts",
+          "hash": "15487685974411670564",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/api-service-lib/tsconfig.json",
+          "hash": "7024484234412117445"
+        },
+        {
+          "file": "libs/backend/api-service-lib/tsconfig.lib.json",
+          "hash": "4990739628208881605"
+        },
+        {
+          "file": "libs/backend/api-service-lib/tsconfig.spec.json",
+          "hash": "2924590645906076043"
+        }
+      ],
+      "aws-cognito-lib": [
+        {
+          "file": "libs/backend/aws-services/aws-cognito-lib/README.md",
+          "hash": "8659612563840953198"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-cognito-lib/eslint.config.js",
+          "hash": "2093890615893252868"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-cognito-lib/jest.config.ts",
+          "hash": "10785912945496576753"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-cognito-lib/project.json",
+          "hash": "1981378391612441591"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-cognito-lib/src/index.ts",
+          "hash": "11813025095678109073"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-cognito-lib/src/lib/aws-cognito-lib.module.ts",
+          "hash": "6283276811054458433",
+          "deps": [
+            "configuration-lib",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-cognito-lib/src/lib/aws-cognito-lib.service.spec.ts",
+          "hash": "4569147550290669965",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-cognito-lib/src/lib/aws-cognito-lib.service.ts",
+          "hash": "2285539586356406352",
+          "deps": [
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-cognito-lib/tsconfig.json",
+          "hash": "3225153280592652337"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-cognito-lib/tsconfig.lib.json",
+          "hash": "14157418033892287268"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-cognito-lib/tsconfig.spec.json",
+          "hash": "4939860449784718704"
+        }
+      ],
+      "aws-secret-manager-lib": [
+        {
+          "file": "libs/backend/aws-services/aws-secret-manager-lib/README.md",
+          "hash": "12886032957922048622"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-secret-manager-lib/eslint.config.js",
+          "hash": "2093890615893252868"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-secret-manager-lib/project.json",
+          "hash": "15877688856928775469"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-secret-manager-lib/src/index.ts",
+          "hash": "11025448693269589989"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-secret-manager-lib/src/lib/aws-secret-manager-lib.module.ts",
+          "hash": "17060901782882274816",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-secret-manager-lib/src/lib/aws-secret-manager-lib.service.ts",
+          "hash": "12626292570688227700",
+          "deps": [
+            "npm:@aws-sdk/client-secrets-manager",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-secret-manager-lib/tsconfig.json",
+          "hash": "7145357875665239830"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-secret-manager-lib/tsconfig.lib.json",
+          "hash": "15041050237027733832"
+        }
+      ],
+      "cms": [
+        {
+          "file": "apps/cms/eslint.config.js",
+          "hash": "14275549775378444151",
+          "deps": [
+            "npm:@eslint/eslintrc",
+            "npm:@eslint/js",
+            "npm:@eslint/compat",
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "apps/cms/index.d.ts",
+          "hash": "300079210084291069"
+        },
+        {
+          "file": "apps/cms/next-env.d.ts",
+          "hash": "650381615855576712"
+        },
+        {
+          "file": "apps/cms/next.config.js",
+          "hash": "6133473762476424656",
+          "deps": [
+            "npm:@nx/next"
+          ]
+        },
+        {
+          "file": "apps/cms/postcss.config.js",
+          "hash": "285234277166090750"
+        },
+        {
+          "file": "apps/cms/project.json",
+          "hash": "2680806771334394136"
+        },
+        {
+          "file": "apps/cms/public/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/cms/public/assets/fonts/Inter-Bold.ttf",
+          "hash": "2915947430692943411"
+        },
+        {
+          "file": "apps/cms/public/assets/fonts/Inter-Regular.ttf",
+          "hash": "17910931451049185240"
+        },
+        {
+          "file": "apps/cms/public/favicon.ico",
+          "hash": "14728722097080500955"
+        },
+        {
+          "file": "apps/cms/src/app/api/events/route.ts",
+          "hash": "15172247014224494116",
+          "deps": [
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/cms/src/app/api/events/utils.ts",
+          "hash": "14311893597477085272"
+        },
+        {
+          "file": "apps/cms/src/app/api/hello/route.ts",
+          "hash": "5687977470793548000"
+        },
+        {
+          "file": "apps/cms/src/app/global.scss",
+          "hash": "1355168690422711679"
+        },
+        {
+          "file": "apps/cms/src/app/layout.tsx",
+          "hash": "14203723519938427232"
+        },
+        {
+          "file": "apps/cms/src/app/page.tsx",
+          "hash": "12313199130154655418"
+        },
+        {
+          "file": "apps/cms/src/config/constants.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/cms/src/config/metadata.ts",
+          "hash": "3900756342309218185"
+        },
+        {
+          "file": "apps/cms/src/hooks/useEventResponseTimeout.ts",
+          "hash": "17844049043296490314",
+          "deps": [
+            "data-access",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/cms/src/hooks/useEventSource.ts",
+          "hash": "3453773769590733812",
+          "deps": [
+            "data-access",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/cms/src/types/layout.ts",
+          "hash": "528803548806473321",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/cms/src/utils/eventEmitter.ts",
+          "hash": "8263553957363370176"
+        },
+        {
+          "file": "apps/cms/tailwind.config.js",
+          "hash": "10644640102916080767",
+          "deps": [
+            "npm:@nx/react",
+            "npm:tailwindcss",
+            "npm:@tailwindcss/typography",
+            "npm:daisyui",
+            "npm:tailwind-scrollbar-hide"
+          ]
+        },
+        {
+          "file": "apps/cms/tsconfig.json",
+          "hash": "14027247043939091299"
+        }
+      ],
+      "user-database-service": [
+        {
+          "file": "libs/backend/database-services/user-database-service/README.md",
+          "hash": "6194843375322379029"
+        },
+        {
+          "file": "libs/backend/database-services/user-database-service/eslint.config.js",
+          "hash": "2093890615893252868"
+        },
+        {
+          "file": "libs/backend/database-services/user-database-service/jest.config.ts",
+          "hash": "1422638378520472641"
+        },
+        {
+          "file": "libs/backend/database-services/user-database-service/project.json",
+          "hash": "13335983733860545495"
+        },
+        {
+          "file": "libs/backend/database-services/user-database-service/src/index.ts",
+          "hash": "15587963350729776036"
+        },
+        {
+          "file": "libs/backend/database-services/user-database-service/src/lib/user-database-service-abstract-class.ts",
+          "hash": "15333470664656301113",
+          "deps": [
+            "dto"
+          ]
+        },
+        {
+          "file": "libs/backend/database-services/user-database-service/src/lib/user-database-service.module.ts",
+          "hash": "7789562097658432040",
+          "deps": [
+            "npm:@nestjs/common",
+            "configuration-lib"
+          ]
+        },
+        {
+          "file": "libs/backend/database-services/user-database-service/src/lib/user-database-service.spec.ts",
+          "hash": "812338397510712735",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "libs/backend/database-services/user-database-service/src/lib/user-database-service.ts",
+          "hash": "2828539096449005050",
+          "deps": [
+            "dto",
+            "dynamo-db-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:dynamodb-onetable"
+          ]
+        },
+        {
+          "file": "libs/backend/database-services/user-database-service/tsconfig.json",
+          "hash": "3225153280592652337"
+        },
+        {
+          "file": "libs/backend/database-services/user-database-service/tsconfig.lib.json",
+          "hash": "14157418033892287268"
+        },
+        {
+          "file": "libs/backend/database-services/user-database-service/tsconfig.spec.json",
+          "hash": "4939860449784718704"
+        }
+      ],
+      "dto": [
+        {
+          "file": "libs/dto/README.md",
+          "hash": "11457356985968163782"
+        },
+        {
+          "file": "libs/dto/eslint.config.js",
+          "hash": "17290109301117894707"
+        },
+        {
+          "file": "libs/dto/project.json",
+          "hash": "6634794661275924039"
+        },
+        {
+          "file": "libs/dto/src/index.ts",
+          "hash": "5074984133439531008"
+        },
+        {
+          "file": "libs/dto/src/lib/cognito/cognito.complete.newpassword.dto.ts",
+          "hash": "6549377142562914780",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/cognito/cognito.confirm.code.dto.ts",
+          "hash": "13785553571139595956",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/cognito/cognito.confirm.user.dto.ts",
+          "hash": "14938834683319974785",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/cognito/cognito.dto.ts",
+          "hash": "870417715087716343",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/cognito/cognito.email.dto.ts",
+          "hash": "9974202756602098650",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/cognito/cognito.forgot.password.dto.ts",
+          "hash": "14526810240091526477",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/cognito/cognito.generate.token.dto.ts",
+          "hash": "936133880014808493",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/cognito/cognito.token.dto.ts",
+          "hash": "15893810705340923570",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/dto.module.ts",
+          "hash": "2405873503011527893",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/email-template/email.template.data.dto.ts",
+          "hash": "16052237899925976910",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/email-template/email.template.dto.ts",
+          "hash": "8463091595265843737",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/email-template/email.template.type.enum.ts",
+          "hash": "2647541890717434201"
+        },
+        {
+          "file": "libs/dto/src/lib/error.response/error.response.dto.ts",
+          "hash": "5128775314489034208"
+        },
+        {
+          "file": "libs/dto/src/lib/message/message.dto.ts",
+          "hash": "88660908794083859"
+        },
+        {
+          "file": "libs/dto/src/lib/pagination/page.dto.ts",
+          "hash": "5764186326612355290",
+          "deps": [
+            "npm:@nestjs/swagger",
+            "npm:class-validator"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/response/response.dto.ts",
+          "hash": "15265275143516987058",
+          "deps": [
+            "npm:@nestjs/swagger",
+            "npm:class-validator"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/ses/email-notification.dto.ts",
+          "hash": "1436793317326241179"
+        },
+        {
+          "file": "libs/dto/src/lib/users/create.user.dto.ts",
+          "hash": "12479486796670956170",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/users/user.role.enum.ts",
+          "hash": "8667281461414129130"
+        },
+        {
+          "file": "libs/dto/src/lib/users/user.status.enum.ts",
+          "hash": "6384589316788452778"
+        },
+        {
+          "file": "libs/dto/src/lib/users/users.data.dto.ts",
+          "hash": "3464062402008310975",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/users/users.dto.ts",
+          "hash": "15955983252066963256",
+          "deps": [
+            "npm:@nestjs/swagger",
+            "npm:class-validator"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/configuration/configuration.dto.ts",
+          "hash": "7617642329862629779",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/configuration/create.configuration.dto.ts",
+          "hash": "7265357536093215162",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/enums/camera.status.enum.ts",
+          "hash": "13899028529600847514"
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/enums/firmware.update.status.enum.ts",
+          "hash": "14486951735413306549"
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/enums/record.status.enum.ts",
+          "hash": "3205408090577287240"
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/enums/status.enum.ts",
+          "hash": "5606183952703124980"
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/enums/vortex.status.enum.ts",
+          "hash": "17454075184213717641"
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/operator/create.operator.dto.ts",
+          "hash": "4465238001503227449",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/operator/operator.dto.ts",
+          "hash": "649218994662600572",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/vortex.event.log/create.vortex.event.log.dto.ts",
+          "hash": "4654176505816853283",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/vortex.event.log/vortex.event.log.dto.ts",
+          "hash": "16690708768170222068",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/vortex/create.vortex.dto.ts",
+          "hash": "92910644813497134",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/vortex/vortex/vortex.dto.ts",
+          "hash": "948502833548377729",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/tsconfig.json",
+          "hash": "1581763891220245391"
+        },
+        {
+          "file": "libs/dto/tsconfig.lib.json",
+          "hash": "14857602007471252228"
+        }
+      ],
+      "@nx-template-v3/source": [
+        {
+          "file": ".DS_Store",
+          "hash": "6512562182495110773"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "11672285059772839503"
+        },
+        {
+          "file": "NestJS_AWSLambda_Dockerfile",
+          "hash": "18326323816570204167"
+        },
+        {
+          "file": "NextJS_ECS_Dockerfile",
+          "hash": "18070555940098251895"
+        },
+        {
+          "file": "README.md",
+          "hash": "12656017998085378883"
+        },
+        {
+          "file": "apps/.DS_Store",
+          "hash": "961801614686888836"
+        },
+        {
+          "file": "apps/mobile-app/ios/MobileApp.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+          "hash": "15708111555404766564"
+        },
+        {
+          "file": "apps/mobile-app/ios/MobileApp.xcworkspace/xcuserdata/idajimenez.xcuserdatad/UserInterfaceState.xcuserstate",
+          "hash": "5812007831624891214"
+        },
+        {
+          "file": "buildspec.yml",
+          "hash": "15488516926010694942"
+        },
+        {
+          "file": "commitlint.config.ts",
+          "hash": "17963001315642810369"
+        },
+        {
+          "file": "deployment.config.json",
+          "hash": "565420853692498497"
+        },
+        {
+          "file": "docker-compose-persisted.yml",
+          "hash": "16930693988542613964"
+        },
+        {
+          "file": "docker-compose.yml",
+          "hash": "2719888838292968795"
+        },
+        {
+          "file": "eslint.config.js",
+          "hash": "3535604748181344684",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "generate-dto.sh",
+          "hash": "16831091462176524614"
+        },
+        {
+          "file": "generate-dynamodb-localstack.js",
+          "hash": "6894905557113583416"
+        },
+        {
+          "file": "generate-dynamodb-tf.js",
+          "hash": "8363690493157917857"
+        },
+        {
+          "file": "generate-service.sh",
+          "hash": "16643007137059264836"
+        },
+        {
+          "file": "jest.config.ts",
+          "hash": "9259664843483529112",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "jest.preset.js",
+          "hash": "7473220183190921152",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "lint-staged.config.js",
+          "hash": "11431422310057273587"
+        },
+        {
+          "file": "local-stack-scripts/aws-secret-manager.sh",
+          "hash": "1214307816322968161"
+        },
+        {
+          "file": "local-stack-scripts/create-email-template.sh",
+          "hash": "16901336032206577143"
+        },
+        {
+          "file": "local-stack-scripts/create-sqs-user-event-3-service.sh",
+          "hash": "14495305210951596472"
+        },
+        {
+          "file": "local-stack-scripts/create-sqs-user-event-handler-service.sh",
+          "hash": "15209527677284859104"
+        },
+        {
+          "file": "local-stack-scripts/create-user.sh",
+          "hash": "2852336089624749841"
+        },
+        {
+          "file": "migrations.json",
+          "hash": "13324861475274888750"
+        },
+        {
+          "file": "nx.json",
+          "hash": "9816465034722507636"
+        },
+        {
+          "file": "package.json",
+          "hash": "2783766267744783031",
+          "deps": [
+            "npm:@babel/core",
+            "npm:@babel/preset-react",
+            "npm:@commitlint/cli",
+            "npm:@commitlint/config-conventional",
+            "npm:@eslint/compat",
+            "npm:@eslint/eslintrc",
+            "npm:@eslint/js",
+            "npm:@nestjs/schematics",
+            "npm:@nestjs/testing",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin",
+            "npm:@nx/jest",
+            "npm:@nx/js",
+            "npm:@nx/nest",
+            "npm:@nx/next",
+            "npm:@nx/node",
+            "npm:@nx/react",
+            "npm:@nx/storybook",
+            "npm:@nx/vite",
+            "npm:@nx/web",
+            "npm:@nx/webpack",
+            "npm:@nx/workspace",
+            "npm:@storybook/addon-essentials",
+            "npm:@storybook/addon-interactions",
+            "npm:@storybook/core-server",
+            "npm:@storybook/jest",
+            "npm:@storybook/react-vite",
+            "npm:@storybook/test-runner",
+            "npm:@storybook/testing-library",
+            "npm:@swc-node/register",
+            "npm:@swc/core",
+            "npm:@swc/helpers",
+            "npm:@tailwindcss/typography",
+            "npm:@testing-library/react",
+            "npm:@types/cors",
+            "npm:@types/jest",
+            "npm:@types/js-cookie",
+            "npm:@types/node",
+            "npm:@types/passport-jwt",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:@vitejs/plugin-react",
+            "npm:@vitest/coverage-v8",
+            "npm:@vitest/ui",
+            "npm:autoprefixer",
+            "npm:babel-jest",
+            "npm:daisyui",
+            "npm:eslint",
+            "npm:eslint-config-next",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-import",
+            "npm:eslint-plugin-jsx-a11y",
+            "npm:eslint-plugin-react",
+            "npm:eslint-plugin-react-hooks",
+            "npm:husky",
+            "npm:jest",
+            "npm:jest-environment-jsdom",
+            "npm:jest-environment-node",
+            "npm:jsdom",
+            "npm:lint-staged",
+            "npm:nx",
+            "npm:postcss",
+            "npm:prettier",
+            "npm:sass",
+            "npm:sass-loader",
+            "npm:storybook",
+            "npm:tailwindcss",
+            "npm:ts-jest",
+            "npm:ts-node",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "npm:verdaccio",
+            "npm:vite",
+            "npm:vitest",
+            "npm:webpack-cli",
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "npm:@aws-sdk/client-dynamodb",
+            "npm:@aws-sdk/client-s3",
+            "npm:@aws-sdk/client-secrets-manager",
+            "npm:@aws-sdk/client-ses",
+            "npm:@aws-sdk/client-sns",
+            "npm:@aws-sdk/client-sqs",
+            "npm:@aws-sdk/s3-request-presigner",
+            "npm:@codegenie/serverless-express",
+            "npm:@headlessui/react",
+            "npm:@hookform/resolvers",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/core",
+            "npm:@nestjs/cqrs",
+            "npm:@nestjs/passport",
+            "npm:@nestjs/platform-express",
+            "npm:@nestjs/swagger",
+            "npm:@popperjs/core",
+            "npm:@radix-ui/react-tooltip",
+            "npm:@tanstack/react-query",
+            "npm:@tanstack/react-query-devtools",
+            "npm:@types/aws-lambda",
+            "npm:@types/express",
+            "npm:@types/nodemailer",
+            "npm:axios",
+            "npm:class-transformer",
+            "npm:class-validator",
+            "npm:classnames",
+            "npm:date-fns",
+            "npm:dynamodb-onetable",
+            "npm:express",
+            "npm:framer-motion",
+            "npm:immer",
+            "npm:js-cookie",
+            "npm:jwks-rsa",
+            "npm:next",
+            "npm:nodemailer",
+            "npm:passport",
+            "npm:passport-jwt",
+            "npm:postcss-loader",
+            "npm:react",
+            "npm:react-content-loader",
+            "npm:react-day-picker",
+            "npm:react-dom",
+            "npm:react-hook-form",
+            "npm:react-popper",
+            "npm:recharts",
+            "npm:reflect-metadata",
+            "npm:rxjs",
+            "npm:tailwind-scrollbar-hide",
+            "npm:use-immer",
+            "npm:yup",
+            "npm:zustand"
+          ]
+        },
+        {
+          "file": "project.json",
+          "hash": "15336659266145302902"
+        },
+        {
+          "file": "run-local-stack-scripts.sh",
+          "hash": "11389275487584819757"
+        },
+        {
+          "file": "script-files/api_main.ts",
+          "hash": "10743544251664609015",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/swagger",
+            "npm:@codegenie/serverless-express",
+            "npm:express",
+            "npm:@nestjs/platform-express"
+          ]
+        },
+        {
+          "file": "script-files/app.module.sqs.ts",
+          "hash": "1380736127901186199",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "script-files/default-api.tf",
+          "hash": "5724513869342566994"
+        },
+        {
+          "file": "script-files/default-sqs.tf",
+          "hash": "589061534655715704"
+        },
+        {
+          "file": "script-files/deployment.json",
+          "hash": "1229888511637390989"
+        },
+        {
+          "file": "script-files/message.handler.service.ts",
+          "hash": "3359136685446599163",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "script-files/schema-database-service-abstract-class.ts",
+          "hash": "14657760132733617676",
+          "deps": [
+            "dto"
+          ]
+        },
+        {
+          "file": "script-files/schema-database-service.ts",
+          "hash": "11737142321090475378",
+          "deps": [
+            "dynamo-db-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:dynamodb-onetable"
+          ]
+        },
+        {
+          "file": "script-files/sqs.controller.ts",
+          "hash": "8391361141101795397",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "script-files/sqs.local.service.ts",
+          "hash": "1090706736528788520",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@aws-sdk/client-sqs"
+          ]
+        },
+        {
+          "file": "script-files/sqs_app.service.ts",
+          "hash": "7635283215505477856",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "script-files/sqs_main.ts",
+          "hash": "212921757418879974",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "tailwind-workspace-preset.js",
+          "hash": "4527298433124857686",
+          "deps": [
+            "npm:tailwind-scrollbar-hide",
+            "npm:@tailwindcss/typography"
+          ]
+        },
+        {
+          "file": "terraform/dev/.terraform.lock.hcl",
+          "hash": "16230921672795168879"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/modules.json",
+          "hash": "13103620020414334894"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/.editorconfig",
+          "hash": "16613051257303048935"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/.github/contributing.md",
+          "hash": "11089591088501396552"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/.github/workflows/lock.yml",
+          "hash": "9248957401676447110"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/.github/workflows/pr-title.yml",
+          "hash": "13032212852302806738"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/.github/workflows/pre-commit.yml",
+          "hash": "17143956594613247635"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/.github/workflows/release.yml",
+          "hash": "6866606264485082191"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/.github/workflows/stale-actions.yaml",
+          "hash": "8393230912347111420"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/.gitignore",
+          "hash": "12890954562763896696"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/.pre-commit-config.yaml",
+          "hash": "17721437159180698854"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/.releaserc.json",
+          "hash": "11506789272576762334"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/CHANGELOG.md",
+          "hash": "9823390334005085335"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/LICENSE",
+          "hash": "11815020173942501002"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/README.md",
+          "hash": "14251470544989003175"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/UPGRADE-3.0.md",
+          "hash": "7369498249063041236"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/UPGRADE-4.0.md",
+          "hash": "17169197229524301826"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/complete/README.md",
+          "hash": "12023157312804348186"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/complete/main.tf",
+          "hash": "8200104217383020961"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/complete/outputs.tf",
+          "hash": "12141986466385945524"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/complete/variables.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/complete/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipam/README.md",
+          "hash": "3653099142107967371"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipam/main.tf",
+          "hash": "921961923938587659"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipam/outputs.tf",
+          "hash": "3605784119090682666"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipam/variables.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipam/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipv6-dualstack/README.md",
+          "hash": "11878213994826738861"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipv6-dualstack/main.tf",
+          "hash": "6854321082867545008"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipv6-dualstack/outputs.tf",
+          "hash": "13081787109336837276"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipv6-dualstack/variables.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipv6-dualstack/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipv6-only/README.md",
+          "hash": "3830535183395700511"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipv6-only/main.tf",
+          "hash": "8408167415631470370"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipv6-only/outputs.tf",
+          "hash": "13081787109336837276"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipv6-only/variables.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/ipv6-only/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/issues/README.md",
+          "hash": "377593965563332845"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/issues/main.tf",
+          "hash": "16086995487214284041"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/issues/outputs.tf",
+          "hash": "17605705391340906175"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/issues/variables.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/issues/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/manage-default-vpc/README.md",
+          "hash": "82715576177535483"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/manage-default-vpc/main.tf",
+          "hash": "13218405900586159892"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/manage-default-vpc/outputs.tf",
+          "hash": "13081787109336837276"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/manage-default-vpc/variables.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/manage-default-vpc/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/network-acls/README.md",
+          "hash": "8399846724221080045"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/network-acls/main.tf",
+          "hash": "11147321096891251459"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/network-acls/outputs.tf",
+          "hash": "13081787109336837276"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/network-acls/variables.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/network-acls/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/outpost/README.md",
+          "hash": "7570177650790802312"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/outpost/main.tf",
+          "hash": "8008464314370771122"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/outpost/outputs.tf",
+          "hash": "13081787109336837276"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/outpost/variables.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/outpost/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/secondary-cidr-blocks/README.md",
+          "hash": "16797540457779095398"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/secondary-cidr-blocks/main.tf",
+          "hash": "328394303102757495"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/secondary-cidr-blocks/outputs.tf",
+          "hash": "13081787109336837276"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/secondary-cidr-blocks/variables.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/secondary-cidr-blocks/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/separate-route-tables/README.md",
+          "hash": "2245958803511079616"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/separate-route-tables/main.tf",
+          "hash": "10455687725514995427"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/separate-route-tables/outputs.tf",
+          "hash": "13081787109336837276"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/separate-route-tables/variables.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/separate-route-tables/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/simple/README.md",
+          "hash": "7276995285058018690"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/simple/main.tf",
+          "hash": "7433752277045153594"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/simple/outputs.tf",
+          "hash": "13081787109336837276"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/simple/variables.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/simple/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/vpc-flow-logs/README.md",
+          "hash": "4233810071913782849"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/vpc-flow-logs/main.tf",
+          "hash": "4735301673695495826"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/vpc-flow-logs/outputs.tf",
+          "hash": "16331727181926386929"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/vpc-flow-logs/variables.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/examples/vpc-flow-logs/versions.tf",
+          "hash": "13862084208389646287"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/main.tf",
+          "hash": "10381770108604149903"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/modules/vpc-endpoints/README.md",
+          "hash": "17014007050938876301"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/modules/vpc-endpoints/main.tf",
+          "hash": "13291849984678574728"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/modules/vpc-endpoints/outputs.tf",
+          "hash": "12526583119878718951"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/modules/vpc-endpoints/variables.tf",
+          "hash": "10660855844860291996"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/modules/vpc-endpoints/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/outputs.tf",
+          "hash": "2034027267423656246"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/variables.tf",
+          "hash": "15867869869806437681"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/versions.tf",
+          "hash": "6811576714341730602"
+        },
+        {
+          "file": "terraform/dev/.terraform/modules/vpc.vpc/vpc-flow-logs.tf",
+          "hash": "16982403164772330783"
+        },
+        {
+          "file": "terraform/dev/.terraform/providers/registry.terraform.io/hashicorp/aws/5.74.0/windows_386/LICENSE.txt",
+          "hash": "3692297163192898383"
+        },
+        {
+          "file": "terraform/dev/.terraform/providers/registry.terraform.io/hashicorp/null/3.2.3/windows_386/LICENSE.txt",
+          "hash": "3692297163192898383"
+        },
+        {
+          "file": "terraform/dev/.terraform/providers/registry.terraform.io/hashicorp/null/3.2.3/windows_386/terraform-provider-null_v3.2.3_x5.exe",
+          "hash": "13315072938178287703"
+        },
+        {
+          "file": "terraform/dev/.terraform/providers/registry.terraform.io/hashicorp/random/3.6.3/windows_386/LICENSE.txt",
+          "hash": "3692297163192898383"
+        },
+        {
+          "file": "terraform/dev/.terraform/providers/registry.terraform.io/hashicorp/random/3.6.3/windows_386/terraform-provider-random_v3.6.3_x5.exe",
+          "hash": "9187445089600826613"
+        },
+        {
+          "file": "terraform/dev/.terraform/terraform.tfstate",
+          "hash": "18273272317393776198"
+        },
+        {
+          "file": "terraform/dev/Readme.txt",
+          "hash": "16978176908731962283"
+        },
+        {
+          "file": "terraform/dev/authentication-api-service.tf",
+          "hash": "13521480966628032701"
+        },
+        {
+          "file": "terraform/dev/codebuild-codepipeline.tf",
+          "hash": "17603863865113644665"
+        },
+        {
+          "file": "terraform/dev/cognito-custom-message.tf",
+          "hash": "5920343092681609936"
+        },
+        {
+          "file": "terraform/dev/cognito.tf",
+          "hash": "7003224418196818656"
+        },
+        {
+          "file": "terraform/dev/dynamodb-email-template.tf",
+          "hash": "7579681795412156270"
+        },
+        {
+          "file": "terraform/dev/dynamodb-user.tf",
+          "hash": "2300430858019051952"
+        },
+        {
+          "file": "terraform/dev/email-api-service.tf",
+          "hash": "105815646677015859"
+        },
+        {
+          "file": "terraform/dev/email-template-api-service.tf",
+          "hash": "2905356109329430847"
+        },
+        {
+          "file": "terraform/dev/file-api-service.tf",
+          "hash": "7236682932573795024"
+        },
+        {
+          "file": "terraform/dev/initial_setup/.terraform.lock.hcl",
+          "hash": "16671071524705472342"
+        },
+        {
+          "file": "terraform/dev/initial_setup/.terraform/providers/registry.terraform.io/hashicorp/aws/5.74.0/windows_386/LICENSE.txt",
+          "hash": "3692297163192898383"
+        },
+        {
+          "file": "terraform/dev/initial_setup/Readme.txt",
+          "hash": "11860683903919668593"
+        },
+        {
+          "file": "terraform/dev/initial_setup/main.tf",
+          "hash": "9949085503634848332"
+        },
+        {
+          "file": "terraform/dev/initial_setup/terraform.tfstate",
+          "hash": "17168481225076424454"
+        },
+        {
+          "file": "terraform/dev/initial_setup/terraform.tfstate.backup",
+          "hash": "5817708472008626517"
+        },
+        {
+          "file": "terraform/dev/main.tf",
+          "hash": "6206362554035149907"
+        },
+        {
+          "file": "terraform/dev/s3-buckets.tf",
+          "hash": "3674894048463975078"
+        },
+        {
+          "file": "terraform/dev/secret-manager.tf",
+          "hash": "8367364251652299245"
+        },
+        {
+          "file": "terraform/dev/ses.tf",
+          "hash": "12985735868532302746"
+        },
+        {
+          "file": "terraform/dev/sms.tf",
+          "hash": "16390434882945368673"
+        },
+        {
+          "file": "terraform/dev/terraform.tfvars",
+          "hash": "15681318176589511051"
+        },
+        {
+          "file": "terraform/dev/user-api-service.tf",
+          "hash": "3447178605428366734"
+        },
+        {
+          "file": "terraform/dev/user-event-handler-service.tf",
+          "hash": "9097074704818962489"
+        },
+        {
+          "file": "terraform/dev/webapp.tf",
+          "hash": "4275006616909512031"
+        },
+        {
+          "file": "terraform/modules/aws_certificates/main.tf",
+          "hash": "17576589812744433303"
+        },
+        {
+          "file": "terraform/modules/aws_code_build/main.tf",
+          "hash": "13678437455506663613"
+        },
+        {
+          "file": "terraform/modules/aws_code_build_credential/main.tf",
+          "hash": "6295811654717932426"
+        },
+        {
+          "file": "terraform/modules/aws_code_commit/main.tf",
+          "hash": "5675621202903391161"
+        },
+        {
+          "file": "terraform/modules/aws_code_pipeline/main.tf",
+          "hash": "15209050779199185934"
+        },
+        {
+          "file": "terraform/modules/aws_cognito/main.tf",
+          "hash": "8690327481863408895"
+        },
+        {
+          "file": "terraform/modules/aws_ecr/main.tf",
+          "hash": "3097974679521826181"
+        },
+        {
+          "file": "terraform/modules/aws_ecs/main.tf",
+          "hash": "3641986004193147773"
+        },
+        {
+          "file": "terraform/modules/aws_ecs_cluster/main.tf",
+          "hash": "2137128078141483475"
+        },
+        {
+          "file": "terraform/modules/aws_ecs_task_definition/main.tf",
+          "hash": "17349542701255110092"
+        },
+        {
+          "file": "terraform/modules/aws_iam_policy/main.tf",
+          "hash": "6831576050513100306"
+        },
+        {
+          "file": "terraform/modules/aws_iam_role/main.tf",
+          "hash": "5208330517484649648"
+        },
+        {
+          "file": "terraform/modules/aws_iam_role_condition/main.tf",
+          "hash": "4601126727764725256"
+        },
+        {
+          "file": "terraform/modules/aws_iam_role_policy_attachment/main.tf",
+          "hash": "6134336565615185907"
+        },
+        {
+          "file": "terraform/modules/aws_kms_key/main.tf",
+          "hash": "14070612366925785352"
+        },
+        {
+          "file": "terraform/modules/aws_lambda_docker/main.tf",
+          "hash": "16609138977937252005"
+        },
+        {
+          "file": "terraform/modules/aws_load_balancer_http/main.tf",
+          "hash": "9829168379664488730"
+        },
+        {
+          "file": "terraform/modules/aws_load_balancer_https/main.tf",
+          "hash": "9090071526752360376"
+        },
+        {
+          "file": "terraform/modules/aws_s3/main.tf",
+          "hash": "18233905132001592172"
+        },
+        {
+          "file": "terraform/modules/aws_secret_manager/main.tf",
+          "hash": "658511218913755729"
+        },
+        {
+          "file": "terraform/modules/aws_security_group_from_alb/main.tf",
+          "hash": "17894679344412603493"
+        },
+        {
+          "file": "terraform/modules/aws_security_group_outbound_only/main.tf",
+          "hash": "7426573016764232220"
+        },
+        {
+          "file": "terraform/modules/aws_security_groups_all_traffic/main.tf",
+          "hash": "16639632683694981987"
+        },
+        {
+          "file": "terraform/modules/aws_ses/main.tf",
+          "hash": "5519899758951894570"
+        },
+        {
+          "file": "terraform/modules/aws_sms/main.tf",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "terraform/modules/aws_sns_topic_fifo/main.tf",
+          "hash": "7526013843506302333"
+        },
+        {
+          "file": "terraform/modules/aws_sqs/main.tf",
+          "hash": "1510803121452455142"
+        },
+        {
+          "file": "terraform/modules/aws_sqs_subscription/main.tf",
+          "hash": "4719340495299115467"
+        },
+        {
+          "file": "terraform/modules/aws_vpc/main.tf",
+          "hash": "1521333903072843008"
+        },
+        {
+          "file": "terraform/modules/random_uuid/main.tf",
+          "hash": "4026409608375637214"
+        },
+        {
+          "file": "tsconfig.base.json",
+          "hash": "6680104363463615807"
+        },
+        {
+          "file": "vitest.workspace.ts",
+          "hash": "17790581426480935240"
+        },
+        {
+          "file": "web-app.env.dev",
+          "hash": "12503319499648921617"
+        },
+        {
+          "file": "web-app.env.stg",
+          "hash": "12503319499648921617"
+        },
+        {
+          "file": "yarn.lock",
+          "hash": "14380048902544256290"
+        }
+      ],
+      "user-event-handler-service": [
+        {
+          "file": "apps/user/user-event-handler-service/eslint.config.js",
+          "hash": "14131162355527991697"
+        },
+        {
+          "file": "apps/user/user-event-handler-service/jest.config.ts",
+          "hash": "16247260078070473447"
+        },
+        {
+          "file": "apps/user/user-event-handler-service/project.json",
+          "hash": "13303776307082076345"
+        },
+        {
+          "file": "apps/user/user-event-handler-service/src/app/app.controller.spec.ts",
+          "hash": "5247604437443151788",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/user/user-event-handler-service/src/app/app.controller.ts",
+          "hash": "7509054161768707558",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "apps/user/user-event-handler-service/src/app/app.module.ts",
+          "hash": "1380736127901186199",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/user/user-event-handler-service/src/app/app.service.spec.ts",
+          "hash": "18184030834515953129",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/user/user-event-handler-service/src/app/app.service.ts",
+          "hash": "3313001255941145938",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/user/user-event-handler-service/src/app/message.handler.service.ts",
+          "hash": "3359136685446599163",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/user/user-event-handler-service/src/app/sqs.local.service.ts",
+          "hash": "1189634210978288121",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@aws-sdk/client-sqs"
+          ]
+        },
+        {
+          "file": "apps/user/user-event-handler-service/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/user/user-event-handler-service/src/main.ts",
+          "hash": "1147273853377603808",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "apps/user/user-event-handler-service/tsconfig.app.json",
+          "hash": "9726622241263531112"
+        },
+        {
+          "file": "apps/user/user-event-handler-service/tsconfig.json",
+          "hash": "11419627713147539158"
+        },
+        {
+          "file": "apps/user/user-event-handler-service/tsconfig.spec.json",
+          "hash": "11234809548007883289"
+        },
+        {
+          "file": "apps/user/user-event-handler-service/webpack.config.js",
+          "hash": "2952516912603803017",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "utils": [
+        {
+          "file": "libs/utils/.eslintrc.json",
+          "hash": "10027298471134862536"
+        },
+        {
+          "file": "libs/utils/README.md",
+          "hash": "12540549419807370810"
+        },
+        {
+          "file": "libs/utils/jest.config.ts",
+          "hash": "8879280463360062490"
+        },
+        {
+          "file": "libs/utils/project.json",
+          "hash": "4459754731330684511"
+        },
+        {
+          "file": "libs/utils/src/config/constants.ts",
+          "hash": "9210897180055102791"
+        },
+        {
+          "file": "libs/utils/src/hooks/useDebounce.ts",
+          "hash": "9722389444860037827"
+        },
+        {
+          "file": "libs/utils/src/lib/date.ts",
+          "hash": "2040166893418707427"
+        },
+        {
+          "file": "libs/utils/src/lib/index.ts",
+          "hash": "13248182471728673215"
+        },
+        {
+          "file": "libs/utils/src/lib/number.ts",
+          "hash": "11500193155245907812"
+        },
+        {
+          "file": "libs/utils/src/lib/string.ts",
+          "hash": "7021657780555136234"
+        },
+        {
+          "file": "libs/utils/src/lib/token.ts",
+          "hash": "1997109891539185811"
+        },
+        {
+          "file": "libs/utils/tsconfig.json",
+          "hash": "15354422003012673377"
+        },
+        {
+          "file": "libs/utils/tsconfig.lib.json",
+          "hash": "9091906222844171214"
+        },
+        {
+          "file": "libs/utils/tsconfig.spec.json",
+          "hash": "2296071707280066126"
+        }
+      ],
+      "message-queue-lib": [
+        {
+          "file": "libs/backend/message-queue-lib/README.md",
+          "hash": "10749489907690455189"
+        },
+        {
+          "file": "libs/backend/message-queue-lib/eslint.config.js",
+          "hash": "11841079831973943732"
+        },
+        {
+          "file": "libs/backend/message-queue-lib/jest.config.ts",
+          "hash": "6444632023936024713"
+        },
+        {
+          "file": "libs/backend/message-queue-lib/project.json",
+          "hash": "6558455917793436175"
+        },
+        {
+          "file": "libs/backend/message-queue-lib/src/index.ts",
+          "hash": "8162340286050277618"
+        },
+        {
+          "file": "libs/backend/message-queue-lib/src/lib/message-queue-abstract-class.ts",
+          "hash": "6251256448065102612",
+          "deps": [
+            "dto"
+          ]
+        },
+        {
+          "file": "libs/backend/message-queue-lib/src/lib/message-queue-aws-lib.service.ts",
+          "hash": "13697406392413786027",
+          "deps": [
+            "aws-sqs-lib",
+            "dto",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/message-queue-lib/src/lib/message-queue-lib.module.ts",
+          "hash": "13954053014035673819",
+          "deps": [
+            "aws-sqs-lib",
+            "configuration-lib",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/message-queue-lib/src/lib/message-queue-lib.service.spec.ts",
+          "hash": "15617063572743637049",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "libs/backend/message-queue-lib/tsconfig.json",
+          "hash": "7024484234412117445"
+        },
+        {
+          "file": "libs/backend/message-queue-lib/tsconfig.lib.json",
+          "hash": "4990739628208881605"
+        },
+        {
+          "file": "libs/backend/message-queue-lib/tsconfig.spec.json",
+          "hash": "2924590645906076043"
+        }
+      ],
+      "user-api-service": [
+        {
+          "file": "apps/user/user-api-service/jest.config.ts",
+          "hash": "753530892211290668"
+        },
+        {
+          "file": "apps/user/user-api-service/project.json",
+          "hash": "10019208555655096693"
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/app.controller.spec.ts",
+          "hash": "13081227780612210744",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/app.controller.ts",
+          "hash": "8194742152470293406",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/app.module.ts",
+          "hash": "11870569115965710301",
+          "deps": [
+            "npm:@nestjs/common",
+            "configuration-lib"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/app.service.spec.ts",
+          "hash": "18278639153968026239",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/app.service.ts",
+          "hash": "7653932249302388706",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/commands/create.user/create.user.command.ts",
+          "hash": "11215958147345974228",
+          "deps": [
+            "dto"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/commands/create.user/create.user.handler.spec.ts",
+          "hash": "1753038190823297322",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/commands/create.user/create.user.handler.ts",
+          "hash": "1598994050080676085",
+          "deps": [
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/commands/hard.delete.user/hard.delete.user.command.ts",
+          "hash": "12913813143116821329"
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/commands/hard.delete.user/hard.delete.user.handler.spec.ts",
+          "hash": "5389655003195732601",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/commands/hard.delete.user/hard.delete.user.handler.ts",
+          "hash": "18214512529724103786",
+          "deps": [
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/commands/soft.delete.user/soft.delete.user.command.ts",
+          "hash": "9373934677882340057"
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/commands/soft.delete.user/soft.delete.user.handler.spec.ts",
+          "hash": "17334788978022005956",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/commands/soft.delete.user/soft.delete.user.handler.ts",
+          "hash": "13254030291477463891",
+          "deps": [
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/commands/update.user/update.user.command.ts",
+          "hash": "8219872616546187646",
+          "deps": [
+            "dto"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/commands/update.user/update.user.handler.spec.ts",
+          "hash": "10412670242621441764",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/commands/update.user/update.user.handler.ts",
+          "hash": "5947778685146183701",
+          "deps": [
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/queries/get.by.email.by.api.key/get.email.by.api.key.handler.spec.ts",
+          "hash": "11267099264014619862",
+          "deps": [
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/testing",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/queries/get.by.email.by.api.key/get.email.by.api.key.handler.ts",
+          "hash": "12878547308922613283",
+          "deps": [
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/queries/get.by.email.by.api.key/get.email.by.api.key.query.ts",
+          "hash": "15352813228774397183"
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/queries/get.by.email/get.user.by.email.handler.spec.ts",
+          "hash": "18082642790106998057",
+          "deps": [
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/testing",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/queries/get.by.email/get.user.by.email.handler.ts",
+          "hash": "3134767848022536201",
+          "deps": [
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/queries/get.by.email/get.user.by.email.query.ts",
+          "hash": "17563695368959152154"
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/queries/get.by.id/get.user.by.id.handler.spec.ts",
+          "hash": "15271464142895094043",
+          "deps": [
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/testing",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/queries/get.by.id/get.user.by.id.handler.ts",
+          "hash": "6069168730562794238",
+          "deps": [
+            "npm:@nestjs/cqrs",
+            "dto",
+            "npm:@nestjs/common",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/queries/get.by.id/get.user.by.id.query.ts",
+          "hash": "3714076757017037215"
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/queries/get.records.pagination/get.records.pagination.handler.spec.ts",
+          "hash": "3539170872052337840",
+          "deps": [
+            "dto",
+            "npm:@nestjs/testing",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/queries/get.records.pagination/get.records.pagination.handler.ts",
+          "hash": "15725105060750667298",
+          "deps": [
+            "npm:@nestjs/cqrs",
+            "dto",
+            "npm:@nestjs/common",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/queries/get.records.pagination/get.records.pagination.query.ts",
+          "hash": "12987021265319464098"
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/test.sqs.controller.ts",
+          "hash": "11722276853326953333",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/test/test.sqs.handler.ts",
+          "hash": "17912861415201004741",
+          "deps": [
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/user.controller.ts",
+          "hash": "3027546867472087089",
+          "deps": [
+            "auth-guard-lib",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/app/users/users.module.ts",
+          "hash": "12338765755450915596",
+          "deps": [
+            "auth-guard-lib",
+            "configuration-lib",
+            "dynamo-db-lib",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs",
+            "user-database-service"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/user/user-api-service/src/main.ts",
+          "hash": "10777693915116764094",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/swagger",
+            "npm:@codegenie/serverless-express",
+            "npm:express",
+            "npm:@nestjs/platform-express"
+          ]
+        },
+        {
+          "file": "apps/user/user-api-service/tsconfig.app.json",
+          "hash": "6168933971257732142"
+        },
+        {
+          "file": "apps/user/user-api-service/tsconfig.json",
+          "hash": "14915891520600804235"
+        },
+        {
+          "file": "apps/user/user-api-service/tsconfig.spec.json",
+          "hash": "2924590645906076043"
+        },
+        {
+          "file": "apps/user/user-api-service/webpack.config.js",
+          "hash": "17035774022241007599",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "file-api-service": [
+        {
+          "file": "apps/misc/file-api-service/eslint.config.js",
+          "hash": "11841079831973943732"
+        },
+        {
+          "file": "apps/misc/file-api-service/jest.config.ts",
+          "hash": "6592417842358341712"
+        },
+        {
+          "file": "apps/misc/file-api-service/project.json",
+          "hash": "13494867465815873157"
+        },
+        {
+          "file": "apps/misc/file-api-service/src/app/app.controller.spec.ts",
+          "hash": "13081227780612210744",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/misc/file-api-service/src/app/app.controller.ts",
+          "hash": "14569627221862156997",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/misc/file-api-service/src/app/app.module.ts",
+          "hash": "2904856724328916940",
+          "deps": [
+            "npm:@nestjs/common",
+            "aws-s3-lib",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "apps/misc/file-api-service/src/app/app.service.spec.ts",
+          "hash": "18278639153968026239",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/misc/file-api-service/src/app/app.service.ts",
+          "hash": "12946534786718112847",
+          "deps": [
+            "aws-s3-lib",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/misc/file-api-service/src/app/queries/get.download.url/get.download.url.handler.ts",
+          "hash": "3770487226580572326",
+          "deps": [
+            "npm:@nestjs/cqrs",
+            "dto",
+            "npm:@nestjs/common",
+            "aws-s3-lib"
+          ]
+        },
+        {
+          "file": "apps/misc/file-api-service/src/app/queries/get.download.url/get.download.url.query.ts",
+          "hash": "12389500578578253607"
+        },
+        {
+          "file": "apps/misc/file-api-service/src/app/queries/get.upload.url/get.upload.url.handler.ts",
+          "hash": "14675365341448122623",
+          "deps": [
+            "npm:@nestjs/cqrs",
+            "dto",
+            "npm:@nestjs/common",
+            "aws-s3-lib"
+          ]
+        },
+        {
+          "file": "apps/misc/file-api-service/src/app/queries/get.upload.url/get.upload.url.query.ts",
+          "hash": "7325262823522939591"
+        },
+        {
+          "file": "apps/misc/file-api-service/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/misc/file-api-service/src/main.ts",
+          "hash": "14657444153035489540",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/swagger",
+            "npm:@codegenie/serverless-express",
+            "npm:express",
+            "npm:@nestjs/platform-express"
+          ]
+        },
+        {
+          "file": "apps/misc/file-api-service/tsconfig.app.json",
+          "hash": "6168933971257732142"
+        },
+        {
+          "file": "apps/misc/file-api-service/tsconfig.json",
+          "hash": "14915891520600804235"
+        },
+        {
+          "file": "apps/misc/file-api-service/tsconfig.spec.json",
+          "hash": "2924590645906076043"
+        },
+        {
+          "file": "apps/misc/file-api-service/webpack.config.js",
+          "hash": "8435514360850731349",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "components-web": [
+        {
+          "file": "libs/frontend/components-web/.babelrc",
+          "hash": "14538993057948261054"
+        },
+        {
+          "file": "libs/frontend/components-web/.storybook/main.ts",
+          "hash": "13218001074766866530",
+          "deps": [
+            "npm:@storybook/react-vite"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/.storybook/preview.ts",
+          "hash": "7318115682772013375",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/README.md",
+          "hash": "8185900224665053577"
+        },
+        {
+          "file": "libs/frontend/components-web/eslint.config.js",
+          "hash": "4415365133862159550",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/package.json",
+          "hash": "2809704888672000232"
+        },
+        {
+          "file": "libs/frontend/components-web/postcss.config.js",
+          "hash": "285234277166090750"
+        },
+        {
+          "file": "libs/frontend/components-web/project.json",
+          "hash": "6571379064581342797"
+        },
+        {
+          "file": "libs/frontend/components-web/public/assets/fonts/HelveticaNeue/HelveticaNeueBlack.otf",
+          "hash": "2676031432956319549"
+        },
+        {
+          "file": "libs/frontend/components-web/public/assets/fonts/HelveticaNeue/HelveticaNeueBold.otf",
+          "hash": "27039197601089711"
+        },
+        {
+          "file": "libs/frontend/components-web/public/assets/fonts/HelveticaNeue/HelveticaNeueRoman.otf",
+          "hash": "12055399163149526162"
+        },
+        {
+          "file": "libs/frontend/components-web/public/assets/images/calendar.png",
+          "hash": "9635609389557376378"
+        },
+        {
+          "file": "libs/frontend/components-web/public/assets/images/health.png",
+          "hash": "15860553097415959608"
+        },
+        {
+          "file": "libs/frontend/components-web/public/assets/images/logo.png",
+          "hash": "9691562606922174660"
+        },
+        {
+          "file": "libs/frontend/components-web/public/assets/images/person.png",
+          "hash": "10684917956845227312"
+        },
+        {
+          "file": "libs/frontend/components-web/public/assets/images/question.png",
+          "hash": "1201815223387151954"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/accordion/accordion.module.scss",
+          "hash": "8849167653369805763"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/accordion/accordion.stories.tsx",
+          "hash": "8523661546401214658",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/accordion/accordion.tsx",
+          "hash": "15372539470265292876",
+          "deps": [
+            "npm:@headlessui/react",
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/avatar/avatar.module.scss",
+          "hash": "18003854281355399366"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/avatar/avatar.stories.tsx",
+          "hash": "12759236084159122690",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/avatar/avatar.tsx",
+          "hash": "13483184445026996076",
+          "deps": [
+            "utils",
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/badge/badge.module.scss",
+          "hash": "1703925149975175311"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/badge/badge.stories.tsx",
+          "hash": "2028469997072570402",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/badge/badge.tsx",
+          "hash": "1918770898442794091",
+          "deps": [
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/card/VisualCard.mdx",
+          "hash": "12933852849039338587"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/card/card.module.scss",
+          "hash": "14787891959560919036"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/card/card.tsx",
+          "hash": "15480679859446444233",
+          "deps": [
+            "npm:classnames",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/card/visualCard.stories.tsx",
+          "hash": "3161929379197002538",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/card/visualCard.tsx",
+          "hash": "9220157719293565744",
+          "deps": [
+            "npm:classnames",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/bar-chart/bar-chart-loader.tsx",
+          "hash": "12801465599447027365",
+          "deps": [
+            "npm:react-content-loader"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/bar-chart/bar-chart.module.scss",
+          "hash": "18296153511164411069"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/bar-chart/bar-chart.spec.tsx",
+          "hash": "817528329076370423",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/bar-chart/bar-chart.stories.tsx",
+          "hash": "16777215803462224504",
+          "deps": [
+            "npm:@storybook/react",
+            "ui-config"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/bar-chart/bar-chart.tsx",
+          "hash": "413344435356916513",
+          "deps": [
+            "ui-config",
+            "npm:react",
+            "npm:recharts"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/legend.tsx",
+          "hash": "9961883898360173012",
+          "deps": [
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/line-chart/line-chart-loader.tsx",
+          "hash": "14522424093748807916",
+          "deps": [
+            "npm:react-content-loader"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/line-chart/line-chart.module.scss",
+          "hash": "9081396995166112249"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/line-chart/line-chart.spec.tsx",
+          "hash": "706674492681265404",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/line-chart/line-chart.stories.tsx",
+          "hash": "1287292774232451320",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/line-chart/line-chart.tsx",
+          "hash": "7878869817380720026",
+          "deps": [
+            "ui-config",
+            "npm:react",
+            "npm:recharts"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/pie-chart/pie-chart-loader.tsx",
+          "hash": "890842952480040627",
+          "deps": [
+            "npm:react-content-loader"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/pie-chart/pie-chart.module.scss",
+          "hash": "8484990982776072354"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/pie-chart/pie-chart.spec.tsx",
+          "hash": "16309370148806906384",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/pie-chart/pie-chart.tsx",
+          "hash": "9546711507058755498",
+          "deps": [
+            "ui-config",
+            "utils",
+            "npm:classnames",
+            "npm:react",
+            "npm:recharts"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/pie-chart/pie-charts.stories.tsx",
+          "hash": "18147629846221082849",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/tooltip.tsx",
+          "hash": "16889911703781583295",
+          "deps": [
+            "npm:recharts"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/charts/utils.ts",
+          "hash": "11023931625832810746",
+          "deps": [
+            "ui-config"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/loader/loader.spec.tsx",
+          "hash": "113449425319116716",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/loader/loader.stories.tsx",
+          "hash": "63949902036140046",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/loader/loader.tsx",
+          "hash": "7016477548447638722",
+          "deps": [
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/note/error-loading-data/error-loading-data.stories.tsx",
+          "hash": "14401991499896677526",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/note/error-loading-data/error-loading-data.tsx",
+          "hash": "1509369653987612763"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/note/no-available/no-available.stories.tsx",
+          "hash": "10409626872154030546",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/note/no-available/no-available.tsx",
+          "hash": "14074841975005352426",
+          "deps": [
+            "ui-config",
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/spinner/spinner.module.scss",
+          "hash": "4143704645387949731"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/spinner/spinner.stories.tsx",
+          "hash": "1249960642000166797",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/spinner/spinner.tsx",
+          "hash": "10120645470721539516"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/tab/tab.module.scss",
+          "hash": "14635272943746384556"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/tab/tab.stories.tsx",
+          "hash": "12287804824770731112",
+          "deps": [
+            "npm:@storybook/react",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/tab/tab.tsx",
+          "hash": "8034798664543430867",
+          "deps": [
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/table/paginate/paginate.module.scss",
+          "hash": "4624093020228262980"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/table/paginate/paginate.spec.tsx",
+          "hash": "15055606949257485390",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/table/paginate/paginate.stories.tsx",
+          "hash": "16536048292255600377",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/table/paginate/paginate.tsx",
+          "hash": "10953044336718419222",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/table/table.spec.tsx",
+          "hash": "13464904599074370033",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/table/table.stories.tsx",
+          "hash": "14440573172277433710",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/table/table.tsx",
+          "hash": "9008314513047918864",
+          "deps": [
+            "npm:classnames",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/toast/toast.module.scss",
+          "hash": "2468744909734575730"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/toast/toast.stories.tsx",
+          "hash": "15555233227989373434",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/toast/toast.tsx",
+          "hash": "1661973350416027296",
+          "deps": [
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/tooltip/tooltip.module.scss",
+          "hash": "11649287749571033572"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/tooltip/tooltip.stories.tsx",
+          "hash": "5958666764345101490",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/tooltip/tooltip.tsx",
+          "hash": "4066290873185254615",
+          "deps": [
+            "npm:@radix-ui/react-tooltip",
+            "npm:classnames",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/typography/typography.module.scss",
+          "hash": "15022851575884888066"
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/typography/typography.stories.tsx",
+          "hash": "17242142561847480187",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/data-display/typography/typography.tsx",
+          "hash": "17835639112592253994",
+          "deps": [
+            "npm:classnames",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/button/button.module.scss",
+          "hash": "2489515011805833924"
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/button/button.stories.tsx",
+          "hash": "4707179757900653959",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/button/button.tsx",
+          "hash": "6137649698996995309",
+          "deps": [
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/calendar/calendar.module.scss",
+          "hash": "2571975704962392656"
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/calendar/calendar.stories.tsx",
+          "hash": "2255913543428780003",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/calendar/calendar.styles.ts",
+          "hash": "17239128322775093829",
+          "deps": [
+            "ui-config"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/calendar/dateOptions.tsx",
+          "hash": "15389118712658900842",
+          "deps": [
+            "npm:classnames",
+            "npm:date-fns",
+            "npm:react-day-picker"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/calendar/datePicker.stories.tsx",
+          "hash": "3197596001443268124",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/calendar/datePicker.tsx",
+          "hash": "8842453276878229247",
+          "deps": [
+            "npm:classnames",
+            "npm:date-fns",
+            "npm:react",
+            "npm:react-day-picker"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/calendar/dateRangePicker.tsx",
+          "hash": "127203333861695220",
+          "deps": [
+            "npm:classnames",
+            "npm:date-fns",
+            "npm:react",
+            "npm:react-day-picker"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/checkbox/checkbox.module.scss",
+          "hash": "1056759482501676410"
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/checkbox/checkbox.stories.tsx",
+          "hash": "12164317656100032993",
+          "deps": [
+            "npm:@storybook/react",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/checkbox/checkbox.tsx",
+          "hash": "3932069565626939134",
+          "deps": [
+            "ui-config",
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/dropdown-menu/dropdown-menu.module.scss",
+          "hash": "18178911874256682455"
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/dropdown-menu/dropdown-menu.stories.tsx",
+          "hash": "12103885994514369896",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/dropdown-menu/dropdown-menu.tsx",
+          "hash": "13374657714078066598",
+          "deps": [
+            "npm:@headlessui/react",
+            "npm:@popperjs/core",
+            "npm:classnames",
+            "npm:react",
+            "npm:react-popper"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/dropdown-options/dropdown-options.module.scss",
+          "hash": "124674527268736293"
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/dropdown-options/dropdown-options.spec.tsx",
+          "hash": "6617475999284924107",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/dropdown-options/dropdown-options.stories.tsx",
+          "hash": "7364815823882038984",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/dropdown-options/dropdown-options.tsx",
+          "hash": "16679478697978259234",
+          "deps": [
+            "npm:@headlessui/react",
+            "npm:classnames",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/form/form.module.scss",
+          "hash": "2379035289013358022"
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/form/form.spec.tsx",
+          "hash": "5016516795813268254",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/form/form.stories.tsx",
+          "hash": "7344534825763944845",
+          "deps": [
+            "npm:@storybook/react",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/form/form.tsx",
+          "hash": "3587257188843328944",
+          "deps": [
+            "npm:@hookform/resolvers",
+            "npm:classnames",
+            "npm:react",
+            "npm:react-hook-form",
+            "npm:use-immer",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/form/structure.ts",
+          "hash": "3007857234040467647",
+          "deps": [
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/input/input.module.scss",
+          "hash": "1764924042324771376"
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/input/input.stories.tsx",
+          "hash": "3803888858339917295",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/input/input.tsx",
+          "hash": "18258735946291989401",
+          "deps": [
+            "ui-config",
+            "npm:classnames",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/radio-button/radio-button.module.scss",
+          "hash": "17889820875627854042"
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/radio-button/radio-button.stories.tsx",
+          "hash": "13284032987305771199",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/radio-button/radio-button.tsx",
+          "hash": "2401558898345282023",
+          "deps": [
+            "ui-config"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/switch/switch.module.scss",
+          "hash": "7405451802416122427"
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/switch/switch.stories.tsx",
+          "hash": "7173804717755931274",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/form-controls/switch/switch.tsx",
+          "hash": "5165931905680237358",
+          "deps": [
+            "npm:@headlessui/react",
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Add.stories.tsx",
+          "hash": "7429665866500343492",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Add.tsx",
+          "hash": "5698043604402107525"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Alert.tsx",
+          "hash": "9736337724294584217"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/ArrowDown.tsx",
+          "hash": "4985505305670356040"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/ArrowLeft.tsx",
+          "hash": "12611534297554261311"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/ArrowRight.tsx",
+          "hash": "930687209455788015"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/ArrowUp.tsx",
+          "hash": "12293772625970702047"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Attach.tsx",
+          "hash": "984538859267107195"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Check.tsx",
+          "hash": "15615173030228714753"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/CheckboxOff.tsx",
+          "hash": "7870296386114578719"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/CheckboxOn.tsx",
+          "hash": "16008539718213103787"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/ChevronDown.tsx",
+          "hash": "4767798270468703123"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/ChevronLeft.tsx",
+          "hash": "2970686977060373584"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/ChevronRight.tsx",
+          "hash": "18142321302953152872"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/ChevronUp.tsx",
+          "hash": "4086907828846539469"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Close.tsx",
+          "hash": "171356357385848954"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Collapse.tsx",
+          "hash": "15515156496108838743"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Dashboard.tsx",
+          "hash": "15826758942369426991"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Docs.mdx",
+          "hash": "8457098798129542391"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Error.tsx",
+          "hash": "17303497002275736899"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Evaluations.tsx",
+          "hash": "10302159147631873698"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Export.tsx",
+          "hash": "16605607251627543951"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/EyeOff.tsx",
+          "hash": "9008191180170163411"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/EyeOn.tsx",
+          "hash": "16363872252704363893"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/File.tsx",
+          "hash": "15337273043266666676"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Groups.tsx",
+          "hash": "14659096569812578611"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Info.tsx",
+          "hash": "11801360955730293431"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Loading.tsx",
+          "hash": "3000373497688660848"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/More.tsx",
+          "hash": "16748711374157322643"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/NoData.tsx",
+          "hash": "10839838832269991115"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/NotAvailable.tsx",
+          "hash": "3680674432094486643"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Notification.tsx",
+          "hash": "17589374343072590656"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Open.tsx",
+          "hash": "2453031459067666783"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Organisations.tsx",
+          "hash": "17583781434450642798"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/RadioOff.tsx",
+          "hash": "8992540628962741489"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/RadioOn.tsx",
+          "hash": "2173208748448468183"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Reporting.tsx",
+          "hash": "17665013025572521505"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Saved.tsx",
+          "hash": "2927318948065696299"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Search.tsx",
+          "hash": "11527815430527785299"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Select.tsx",
+          "hash": "6093160349820451637"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Selector.tsx",
+          "hash": "10927337301701352264"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Sort.tsx",
+          "hash": "287817043936870362"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Success.tsx",
+          "hash": "5545796474407057770"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/Warning.tsx",
+          "hash": "18107439367404830236"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/X.tsx",
+          "hash": "17296309440798236589"
+        },
+        {
+          "file": "libs/frontend/components-web/src/icons/index.ts",
+          "hash": "13013858661323869160"
+        },
+        {
+          "file": "libs/frontend/components-web/src/index.ts",
+          "hash": "4230764507024678046"
+        },
+        {
+          "file": "libs/frontend/components-web/src/navigation/breadcrumbs/breadcrumbs.spec.tsx",
+          "hash": "10993640187274147612",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/navigation/breadcrumbs/breadcrumbs.stories.tsx",
+          "hash": "6407975552903037715",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/navigation/breadcrumbs/breadcrumbs.tsx",
+          "hash": "9753661247512143212",
+          "deps": [
+            "ui-config",
+            "npm:classnames",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/navigation/header/header.module.scss",
+          "hash": "59729028236577508"
+        },
+        {
+          "file": "libs/frontend/components-web/src/navigation/header/header.stories.tsx",
+          "hash": "4218859899827161898",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/navigation/header/header.tsx",
+          "hash": "3365889572350011710",
+          "deps": [
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/navigation/sidebar/profileWrapper.tsx",
+          "hash": "15759710751801587277",
+          "deps": [
+            "npm:classnames"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/navigation/sidebar/sidebar.module.scss",
+          "hash": "13895797914027668009"
+        },
+        {
+          "file": "libs/frontend/components-web/src/navigation/sidebar/sidebar.stories.tsx",
+          "hash": "15116421687704721882",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/navigation/sidebar/sidebar.tsx",
+          "hash": "11196780230592272524",
+          "deps": [
+            "ui-config",
+            "npm:classnames",
+            "npm:framer-motion",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/styles/_mixins.scss",
+          "hash": "12152803894621966358"
+        },
+        {
+          "file": "libs/frontend/components-web/src/styles/calendar.scss",
+          "hash": "15292342416779307415"
+        },
+        {
+          "file": "libs/frontend/components-web/src/styles/colors.js",
+          "hash": "15410357381094793499",
+          "deps": [
+            "ui-config"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/styles/index.scss",
+          "hash": "8355159297286192407"
+        },
+        {
+          "file": "libs/frontend/components-web/src/types/alert.ts",
+          "hash": "10977815767102053344"
+        },
+        {
+          "file": "libs/frontend/components-web/src/types/button.ts",
+          "hash": "2517280030421313583"
+        },
+        {
+          "file": "libs/frontend/components-web/src/types/chart.ts",
+          "hash": "7439367943414751507",
+          "deps": [
+            "npm:recharts"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/src/types/icons.ts",
+          "hash": "15240984179504556714"
+        },
+        {
+          "file": "libs/frontend/components-web/src/types/input.ts",
+          "hash": "2492128730795737873"
+        },
+        {
+          "file": "libs/frontend/components-web/src/types/menu.ts",
+          "hash": "9246231596292177179"
+        },
+        {
+          "file": "libs/frontend/components-web/src/types/typography.ts",
+          "hash": "10901222538660647004"
+        },
+        {
+          "file": "libs/frontend/components-web/src/types/utility.ts",
+          "hash": "7336229837227606112"
+        },
+        {
+          "file": "libs/frontend/components-web/tailwind.config.js",
+          "hash": "8359365526540714131",
+          "deps": [
+            "npm:@nx/react"
+          ]
+        },
+        {
+          "file": "libs/frontend/components-web/tsconfig.json",
+          "hash": "10062011901780109327"
+        },
+        {
+          "file": "libs/frontend/components-web/tsconfig.lib.json",
+          "hash": "1933564816056283146"
+        },
+        {
+          "file": "libs/frontend/components-web/tsconfig.spec.json",
+          "hash": "7798069038963200017"
+        },
+        {
+          "file": "libs/frontend/components-web/tsconfig.storybook.json",
+          "hash": "12492101156912190879"
+        },
+        {
+          "file": "libs/frontend/components-web/vite.config.ts",
+          "hash": "6380269581971882496",
+          "deps": [
+            "npm:@nx/vite",
+            "npm:@vitejs/plugin-react",
+            "npm:vite"
+          ]
+        }
+      ],
+      "aws-sns-lib": [
+        {
+          "file": "libs/backend/aws-services/aws-sns-lib/README.md",
+          "hash": "5259072640399956776"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sns-lib/eslint.config.js",
+          "hash": "2093890615893252868"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sns-lib/jest.config.ts",
+          "hash": "3212535386362789057"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sns-lib/project.json",
+          "hash": "4268053599009010976"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sns-lib/src/index.ts",
+          "hash": "8522988621375929982"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sns-lib/src/lib/aws-sns-lib.module.ts",
+          "hash": "11222448995651547361",
+          "deps": [
+            "configuration-lib",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sns-lib/src/lib/aws-sns-lib.service.spec.ts",
+          "hash": "2078061633278821618",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sns-lib/src/lib/aws-sns-lib.service.ts",
+          "hash": "17912590051765672984",
+          "deps": [
+            "npm:@aws-sdk/client-sns",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sns-lib/tsconfig.json",
+          "hash": "3225153280592652337"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sns-lib/tsconfig.lib.json",
+          "hash": "14157418033892287268"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sns-lib/tsconfig.spec.json",
+          "hash": "4939860449784718704"
+        }
+      ],
+      "auth-guard-lib": [
+        {
+          "file": "libs/backend/auth-guard-lib/README.md",
+          "hash": "2085642176175697703"
+        },
+        {
+          "file": "libs/backend/auth-guard-lib/jest.config.ts",
+          "hash": "6088962552839150392"
+        },
+        {
+          "file": "libs/backend/auth-guard-lib/project.json",
+          "hash": "12909494842646551399"
+        },
+        {
+          "file": "libs/backend/auth-guard-lib/src/index.ts",
+          "hash": "5532947804043590814"
+        },
+        {
+          "file": "libs/backend/auth-guard-lib/src/lib/UserCognito.ts",
+          "hash": "4525818474242781983"
+        },
+        {
+          "file": "libs/backend/auth-guard-lib/src/lib/auth-guard-lib.module.ts",
+          "hash": "10329832432951018398",
+          "deps": [
+            "configuration-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/passport"
+          ]
+        },
+        {
+          "file": "libs/backend/auth-guard-lib/src/lib/cognito.api.key.header.guard.ts",
+          "hash": "3113192070820214135",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "libs/backend/auth-guard-lib/src/lib/cognito.auth.guard.ts",
+          "hash": "11536185591115424038",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/passport"
+          ]
+        },
+        {
+          "file": "libs/backend/auth-guard-lib/src/lib/currentUser.decorator.ts",
+          "hash": "12705766609404906710",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/auth-guard-lib/src/lib/jwt.strategy.ts",
+          "hash": "15090575445034641310",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/passport",
+            "npm:jwks-rsa",
+            "npm:passport-jwt"
+          ]
+        },
+        {
+          "file": "libs/backend/auth-guard-lib/tsconfig.json",
+          "hash": "2557874373890351669"
+        },
+        {
+          "file": "libs/backend/auth-guard-lib/tsconfig.lib.json",
+          "hash": "5754459057639250434"
+        },
+        {
+          "file": "libs/backend/auth-guard-lib/tsconfig.spec.json",
+          "hash": "2579164740543429247"
+        }
+      ],
+      "data-access": [
+        {
+          "file": "libs/frontend/data-access/.babelrc",
+          "hash": "14538993057948261054"
+        },
+        {
+          "file": "libs/frontend/data-access/.eslintrc.json",
+          "hash": "17033529410110942756"
+        },
+        {
+          "file": "libs/frontend/data-access/README.md",
+          "hash": "1043175311183175491"
+        },
+        {
+          "file": "libs/frontend/data-access/project.json",
+          "hash": "9550258375327876026"
+        },
+        {
+          "file": "libs/frontend/data-access/src/api/auth.ts",
+          "hash": "8110357076089594079",
+          "deps": [
+            "dto"
+          ]
+        },
+        {
+          "file": "libs/frontend/data-access/src/api/axiosConfig.ts",
+          "hash": "9991623435227683109",
+          "deps": [
+            "utils",
+            "npm:axios",
+            "npm:js-cookie"
+          ]
+        },
+        {
+          "file": "libs/frontend/data-access/src/api/index.ts",
+          "hash": "6433587270983779745"
+        },
+        {
+          "file": "libs/frontend/data-access/src/api/user.ts",
+          "hash": "3044350164304706316",
+          "deps": [
+            "dto"
+          ]
+        },
+        {
+          "file": "libs/frontend/data-access/src/config/index.ts",
+          "hash": "18149971183652769541"
+        },
+        {
+          "file": "libs/frontend/data-access/src/hooks/useAuth.ts",
+          "hash": "8973848323597919644",
+          "deps": [
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "utils",
+            "npm:js-cookie",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "libs/frontend/data-access/src/hooks/useCountdown.ts",
+          "hash": "10351295598153358495",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/data-access/src/hooks/useIsProcessing.ts",
+          "hash": "10018706013873390654",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/frontend/data-access/src/state-management/createAuthedUserSlice.ts",
+          "hash": "7105703873342266880",
+          "deps": [
+            "dto",
+            "npm:zustand"
+          ]
+        },
+        {
+          "file": "libs/frontend/data-access/src/state-management/createEventReferenceSlice.ts",
+          "hash": "9691348117238597054",
+          "deps": [
+            "npm:zustand"
+          ]
+        },
+        {
+          "file": "libs/frontend/data-access/src/state-management/createFlashNotificationSlice.ts",
+          "hash": "13288758526012959950",
+          "deps": [
+            "npm:zustand"
+          ]
+        },
+        {
+          "file": "libs/frontend/data-access/src/state-management/index.ts",
+          "hash": "12773027003275357139",
+          "deps": [
+            "npm:zustand"
+          ]
+        },
+        {
+          "file": "libs/frontend/data-access/src/types/responseError.ts",
+          "hash": "13591123831835830037",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "libs/frontend/data-access/tsconfig.json",
+          "hash": "5096297754543974541"
+        },
+        {
+          "file": "libs/frontend/data-access/tsconfig.lib.json",
+          "hash": "5973982241611842411"
+        }
+      ],
+      "web-app": [
+        {
+          "file": "apps/web-app/eslint.config.js",
+          "hash": "6163459561615705519",
+          "deps": [
+            "npm:@eslint/eslintrc",
+            "npm:@eslint/js",
+            "npm:@eslint/compat",
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "apps/web-app/index.d.ts",
+          "hash": "300079210084291069"
+        },
+        {
+          "file": "apps/web-app/jest.config.ts",
+          "hash": "13032599048406015422"
+        },
+        {
+          "file": "apps/web-app/next-env.d.ts",
+          "hash": "650381615855576712"
+        },
+        {
+          "file": "apps/web-app/next.config.js",
+          "hash": "1907951370161036945",
+          "deps": [
+            "npm:@nx/next"
+          ]
+        },
+        {
+          "file": "apps/web-app/postcss.config.js",
+          "hash": "285234277166090750"
+        },
+        {
+          "file": "apps/web-app/project.json",
+          "hash": "15794364797155387942"
+        },
+        {
+          "file": "apps/web-app/public/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/web-app/public/assets/fonts/HelveticaNeue/HelveticaNeueBlack.otf",
+          "hash": "2676031432956319549"
+        },
+        {
+          "file": "apps/web-app/public/assets/fonts/HelveticaNeue/HelveticaNeueBold.otf",
+          "hash": "27039197601089711"
+        },
+        {
+          "file": "apps/web-app/public/assets/fonts/HelveticaNeue/HelveticaNeueRoman.otf",
+          "hash": "12055399163149526162"
+        },
+        {
+          "file": "apps/web-app/public/assets/images/bg-forgot-pw.webp",
+          "hash": "12782172064907590935"
+        },
+        {
+          "file": "apps/web-app/public/assets/images/bg-login.webp",
+          "hash": "17970541916027865850"
+        },
+        {
+          "file": "apps/web-app/public/assets/images/bg-register.webp",
+          "hash": "377723224970186145"
+        },
+        {
+          "file": "apps/web-app/public/assets/images/logo.png",
+          "hash": "6421207590699391193"
+        },
+        {
+          "file": "apps/web-app/public/assets/images/oldst_logo.png",
+          "hash": "10782870908524994138"
+        },
+        {
+          "file": "apps/web-app/public/favicon.ico",
+          "hash": "14728722097080500955"
+        },
+        {
+          "file": "apps/web-app/specs/index.spec.tsx",
+          "hash": "6369666607169373583",
+          "deps": [
+            "npm:react",
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/app/(authenticated-routes)/dashboard/page.tsx",
+          "hash": "10870657691420239540",
+          "deps": [
+            "components-web"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/app/(authenticated-routes)/layout.tsx",
+          "hash": "11415176257813954957",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/app/(authenticated-routes)/settings/page.tsx",
+          "hash": "13151179953310981068"
+        },
+        {
+          "file": "apps/web-app/src/app/api/health/route.ts",
+          "hash": "11768983924460824954",
+          "deps": [
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/app/auth/[action]/page.tsx",
+          "hash": "12682810383823596712",
+          "deps": [
+            "components-web",
+            "npm:classnames",
+            "npm:next",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/app/auth/[action]/styles.module.scss",
+          "hash": "8878936547587637421"
+        },
+        {
+          "file": "apps/web-app/src/app/auth/styles.module.scss",
+          "hash": "1623111026640410488"
+        },
+        {
+          "file": "apps/web-app/src/app/auth/template.tsx",
+          "hash": "10179731180947595222",
+          "deps": [
+            "data-access",
+            "npm:next",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/app/forgot-password/layout.tsx",
+          "hash": "1606030344447593265",
+          "deps": [
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/app/forgot-password/page.tsx",
+          "hash": "12668087410513557642",
+          "deps": [
+            "components-web"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/app/forgot-password/styles.module.scss",
+          "hash": "13370105182791796027"
+        },
+        {
+          "file": "apps/web-app/src/app/forgot-password/verify/page.tsx",
+          "hash": "249243108831696304",
+          "deps": [
+            "components-web"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/app/global.scss",
+          "hash": "11855546407738933268"
+        },
+        {
+          "file": "apps/web-app/src/app/layout.tsx",
+          "hash": "16366816914588000756",
+          "deps": [
+            "components-web",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/app/page.tsx",
+          "hash": "14036994396920942284"
+        },
+        {
+          "file": "apps/web-app/src/components/global/client-provider/client-provider.tsx",
+          "hash": "17517820986720826941",
+          "deps": [
+            "npm:next",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/global/flash-notification/flash-notification.spec.tsx",
+          "hash": "164307892438100099",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/global/flash-notification/flash-notification.tsx",
+          "hash": "17872912676109907108",
+          "deps": [
+            "components-web",
+            "data-access",
+            "npm:framer-motion",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/global/protected-route/protected-route.tsx",
+          "hash": "5981801296621912588",
+          "deps": [
+            "utils",
+            "npm:framer-motion",
+            "npm:js-cookie",
+            "npm:next",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/global/react-query/react-query-provder.tsx",
+          "hash": "12277446989286163254",
+          "deps": [
+            "npm:@tanstack/react-query",
+            "npm:@tanstack/react-query-devtools",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/layouts/with-sidebar/with-sidebar.module.scss",
+          "hash": "11010515701973350775"
+        },
+        {
+          "file": "apps/web-app/src/components/layouts/with-sidebar/with-sidebar.tsx",
+          "hash": "12890809209425835738",
+          "deps": [
+            "components-web",
+            "npm:next",
+            [
+              "components-web",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/auth/index.ts",
+          "hash": "17570001712124231561"
+        },
+        {
+          "file": "apps/web-app/src/components/modules/auth/login/login.form.tsx",
+          "hash": "4330725235117110157",
+          "deps": [
+            "components-web",
+            "dto",
+            "utils",
+            "npm:next",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/auth/login/login.structure.ts",
+          "hash": "16960180655354948106",
+          "deps": [
+            "components-web",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/auth/login/useHandleLogin.ts",
+          "hash": "12886004060627512499",
+          "deps": [
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "data-access",
+            "dto",
+            "npm:@tanstack/react-query"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/auth/new-password/new-password.form.tsx",
+          "hash": "13853669362150295133",
+          "deps": [
+            "components-web",
+            "data-access",
+            "utils",
+            "npm:js-cookie"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/auth/new-password/new-password.structure.ts",
+          "hash": "16034826815309642267",
+          "deps": [
+            "components-web",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/auth/new-password/useHandleNewPassword.ts",
+          "hash": "9463331142148058240",
+          "deps": [
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "data-access",
+            "dto",
+            "npm:@tanstack/react-query"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/auth/register/register.form.tsx",
+          "hash": "15154817450167858711",
+          "deps": [
+            "components-web"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/auth/register/register.structure.ts",
+          "hash": "15456035841127242054",
+          "deps": [
+            "components-web",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/auth/register/useHandleRegister.ts",
+          "hash": "6079044443183531485",
+          "deps": [
+            "data-access",
+            "dto",
+            "npm:@tanstack/react-query",
+            "utils",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/dashboard/profile-header-menu/profile-header-menu.tsx",
+          "hash": "6999765396420400425",
+          "deps": [
+            "components-web",
+            "data-access",
+            "utils",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/forgot-password/index.ts",
+          "hash": "205443991719878301"
+        },
+        {
+          "file": "apps/web-app/src/components/modules/forgot-password/request/request.form.tsx",
+          "hash": "2053436699696357448",
+          "deps": [
+            "components-web",
+            "dto"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/forgot-password/request/request.structure.ts",
+          "hash": "9794279853793250863",
+          "deps": [
+            "components-web",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/forgot-password/request/useHandleResetPassword.ts",
+          "hash": "2659897934712800565",
+          "deps": [
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "data-access",
+            "dto",
+            "npm:@tanstack/react-query",
+            "utils",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/forgot-password/resend-code/resend-code.tsx",
+          "hash": "9781660040008891172",
+          "deps": [
+            "components-web",
+            "data-access"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/forgot-password/verify/useHandleVerifyOTP.ts",
+          "hash": "12519263024033028305",
+          "deps": [
+            "data-access",
+            "dto",
+            "npm:@tanstack/react-query",
+            "utils",
+            "npm:next",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/forgot-password/verify/verify-otp.form.tsx",
+          "hash": "17493726824651568134",
+          "deps": [
+            "components-web",
+            "utils",
+            "npm:next",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/forgot-password/verify/verify-otp.structure.ts",
+          "hash": "17960239967983835349",
+          "deps": [
+            "components-web",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/test-components/get-user/get-user.tsx",
+          "hash": "14792205886416176761",
+          "deps": [
+            "components-web",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/components/modules/test-components/get-user/useQueryUserById.ts",
+          "hash": "906379263969668278",
+          "deps": [
+            "data-access",
+            "npm:@tanstack/react-query"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/config/constants.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/web-app/src/config/metadata.ts",
+          "hash": "3900756342309218185"
+        },
+        {
+          "file": "apps/web-app/src/types/layout.ts",
+          "hash": "528803548806473321",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web-app/src/utils/eventEmitter.ts",
+          "hash": "8739925573440254554"
+        },
+        {
+          "file": "apps/web-app/tailwind.config.js",
+          "hash": "9875688013024214090",
+          "deps": [
+            "npm:@nx/react",
+            "components-web"
+          ]
+        },
+        {
+          "file": "apps/web-app/tsconfig.json",
+          "hash": "14275436842340033717"
+        },
+        {
+          "file": "apps/web-app/tsconfig.spec.json",
+          "hash": "4919308245432237962"
+        }
+      ],
+      "dynamo-db-lib": [
+        {
+          "file": "libs/backend/dynamo-db-lib/README.md",
+          "hash": "12385070993246138404"
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/eslint.config.js",
+          "hash": "11841079831973943732"
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/project.json",
+          "hash": "6784532586534543953"
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/src/index.ts",
+          "hash": "16696682386297606929"
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/src/lib/dynamo-db-lib.module.ts",
+          "hash": "6917363760876937958",
+          "deps": [
+            "configuration-lib",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/src/lib/dynamo-db-lib.service.ts",
+          "hash": "10404834378590802882",
+          "deps": [
+            "npm:@aws-sdk/client-dynamodb",
+            "npm:dynamodb-onetable",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/src/lib/schema/BookAuthorSchema.ts",
+          "hash": "7717537280253542716",
+          "deps": [
+            "npm:dynamodb-onetable"
+          ]
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/src/lib/schema/EmailTemplateSchema.ts",
+          "hash": "5757463709687052679",
+          "deps": [
+            "npm:dynamodb-onetable"
+          ]
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/src/lib/schema/UserSchema.ts",
+          "hash": "15023137352014426476",
+          "deps": [
+            "npm:dynamodb-onetable"
+          ]
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/src/lib/schema/VortexSchema.ts",
+          "hash": "8772040527242745642",
+          "deps": [
+            "npm:dynamodb-onetable"
+          ]
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/src/lib/utils/dynamodb.options.util.ts",
+          "hash": "12566838182592463384",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/src/lib/utils/dynamodb.page.record.handler.ts",
+          "hash": "12356894110415839621",
+          "deps": [
+            "dto"
+          ]
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/tsconfig.json",
+          "hash": "11694468379504486425"
+        },
+        {
+          "file": "libs/backend/dynamo-db-lib/tsconfig.lib.json",
+          "hash": "17941572995728499288"
+        }
+      ],
+      "aws-sqs-lib": [
+        {
+          "file": "libs/backend/aws-services/aws-sqs-lib/README.md",
+          "hash": "14710255209050130917"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sqs-lib/eslint.config.js",
+          "hash": "2093890615893252868"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sqs-lib/jest.config.ts",
+          "hash": "16397251951956879251"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sqs-lib/project.json",
+          "hash": "16826672292553058471"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sqs-lib/src/index.ts",
+          "hash": "16139734234376369961"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sqs-lib/src/lib/aws-sqs-lib.module.ts",
+          "hash": "1671465229633857719",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sqs-lib/src/lib/aws-sqs-lib.service.spec.ts",
+          "hash": "13036125952266097427",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sqs-lib/src/lib/aws-sqs-lib.service.ts",
+          "hash": "5307930547797118069",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@aws-sdk/client-sqs"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sqs-lib/tsconfig.json",
+          "hash": "3225153280592652337"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sqs-lib/tsconfig.lib.json",
+          "hash": "14157418033892287268"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-sqs-lib/tsconfig.spec.json",
+          "hash": "4939860449784718704"
+        }
+      ],
+      "ui-config": [
+        {
+          "file": "libs/frontend/ui-config/.eslintrc.json",
+          "hash": "10027298471134862536"
+        },
+        {
+          "file": "libs/frontend/ui-config/README.md",
+          "hash": "3978931856585202177"
+        },
+        {
+          "file": "libs/frontend/ui-config/jest.config.ts",
+          "hash": "5764775486683407037"
+        },
+        {
+          "file": "libs/frontend/ui-config/project.json",
+          "hash": "8567582284466188453"
+        },
+        {
+          "file": "libs/frontend/ui-config/src/colors/colors.json",
+          "hash": "10278478033822468867"
+        },
+        {
+          "file": "libs/frontend/ui-config/src/colors/index.ts",
+          "hash": "7818424686973445527"
+        },
+        {
+          "file": "libs/frontend/ui-config/src/fonts/HelveticaNeue/HelveticaNeue.ttc",
+          "hash": "14858485115309309231"
+        },
+        {
+          "file": "libs/frontend/ui-config/src/fonts/HelveticaNeue/HelveticaNeueBlack.otf",
+          "hash": "2676031432956319549"
+        },
+        {
+          "file": "libs/frontend/ui-config/src/fonts/HelveticaNeue/HelveticaNeueBold.otf",
+          "hash": "27039197601089711"
+        },
+        {
+          "file": "libs/frontend/ui-config/src/fonts/HelveticaNeue/HelveticaNeueRoman.otf",
+          "hash": "12055399163149526162"
+        },
+        {
+          "file": "libs/frontend/ui-config/tsconfig.json",
+          "hash": "2557874373890351669"
+        },
+        {
+          "file": "libs/frontend/ui-config/tsconfig.lib.json",
+          "hash": "12314977939906794596"
+        },
+        {
+          "file": "libs/frontend/ui-config/tsconfig.spec.json",
+          "hash": "2579164740543429247"
+        }
+      ],
+      "email-template-api-service": [
+        {
+          "file": "apps/misc/email-template-api-service/jest.config.ts",
+          "hash": "16359500124562878399"
+        },
+        {
+          "file": "apps/misc/email-template-api-service/project.json",
+          "hash": "2123281458672469519"
+        },
+        {
+          "file": "apps/misc/email-template-api-service/src/app/app.controller.spec.ts",
+          "hash": "13081227780612210744",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/misc/email-template-api-service/src/app/app.controller.ts",
+          "hash": "9999665245563654434",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs",
+            "dto",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "apps/misc/email-template-api-service/src/app/app.module.ts",
+          "hash": "680665209478645462",
+          "deps": [
+            "npm:@nestjs/common",
+            "email-template-database-service",
+            "npm:@nestjs/config",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/misc/email-template-api-service/src/app/app.service.spec.ts",
+          "hash": "18278639153968026239",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/misc/email-template-api-service/src/app/app.service.ts",
+          "hash": "7653932249302388706",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/misc/email-template-api-service/src/app/commands/create.email.template/create.email.template.command.ts",
+          "hash": "10740951527566985405",
+          "deps": [
+            "dto"
+          ]
+        },
+        {
+          "file": "apps/misc/email-template-api-service/src/app/commands/create.email.template/create.email.template.handler.ts",
+          "hash": "13240037878746672673",
+          "deps": [
+            "dto",
+            "email-template-database-service",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/misc/email-template-api-service/src/app/queries/get.email.template.by.typeand.language/get.email.template.by.typeand.language.handler.ts",
+          "hash": "16369398138813721877",
+          "deps": [
+            "npm:@nestjs/cqrs",
+            "dto",
+            "npm:@nestjs/common",
+            "email-template-database-service"
+          ]
+        },
+        {
+          "file": "apps/misc/email-template-api-service/src/app/queries/get.email.template.by.typeand.language/get.email.template.by.typeand.language.query.ts",
+          "hash": "13418987995076366449"
+        },
+        {
+          "file": "apps/misc/email-template-api-service/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/misc/email-template-api-service/src/main.ts",
+          "hash": "17578879358316164992",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/swagger",
+            "npm:@codegenie/serverless-express",
+            "npm:express",
+            "npm:@nestjs/platform-express"
+          ]
+        },
+        {
+          "file": "apps/misc/email-template-api-service/tsconfig.app.json",
+          "hash": "6168933971257732142"
+        },
+        {
+          "file": "apps/misc/email-template-api-service/tsconfig.json",
+          "hash": "14915891520600804235"
+        },
+        {
+          "file": "apps/misc/email-template-api-service/tsconfig.spec.json",
+          "hash": "2924590645906076043"
+        },
+        {
+          "file": "apps/misc/email-template-api-service/webpack.config.js",
+          "hash": "3764351839535284930",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "aws-s3-lib": [
+        {
+          "file": "libs/backend/aws-services/aws-s3-lib/README.md",
+          "hash": "10761400149389846640"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-s3-lib/eslint.config.js",
+          "hash": "2093890615893252868"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-s3-lib/project.json",
+          "hash": "17572613058451894791"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-s3-lib/src/index.ts",
+          "hash": "827952874450875284"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-s3-lib/src/lib/aws-s3-lib.module.ts",
+          "hash": "3617408342077826299",
+          "deps": [
+            "configuration-lib",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-s3-lib/src/lib/aws-s3-lib.service.ts",
+          "hash": "11167008389843581872",
+          "deps": [
+            "npm:@aws-sdk/client-s3",
+            "npm:@aws-sdk/s3-request-presigner",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "libs/backend/aws-services/aws-s3-lib/tsconfig.json",
+          "hash": "7145357875665239830"
+        },
+        {
+          "file": "libs/backend/aws-services/aws-s3-lib/tsconfig.lib.json",
+          "hash": "15041050237027733832"
+        }
+      ],
+      "cognito-custom-message-service": [
+        {
+          "file": "apps/misc/cognito-custom-message-service/jest.config.ts",
+          "hash": "15988384925610425872"
+        },
+        {
+          "file": "apps/misc/cognito-custom-message-service/project.json",
+          "hash": "9226660530239137825"
+        },
+        {
+          "file": "apps/misc/cognito-custom-message-service/src/app/app.controller.spec.ts",
+          "hash": "13081227780612210744",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/misc/cognito-custom-message-service/src/app/app.controller.ts",
+          "hash": "8391361141101795397",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "apps/misc/cognito-custom-message-service/src/app/app.module.ts",
+          "hash": "11502386818027681408",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "email-template-database-service"
+          ]
+        },
+        {
+          "file": "apps/misc/cognito-custom-message-service/src/app/app.service.spec.ts",
+          "hash": "18278639153968026239",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/misc/cognito-custom-message-service/src/app/app.service.ts",
+          "hash": "8932915262757749727",
+          "deps": [
+            "dto",
+            "dynamo-db-lib",
+            "email-template-database-service",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "apps/misc/cognito-custom-message-service/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/misc/cognito-custom-message-service/src/main.ts",
+          "hash": "3411220212508839348",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "apps/misc/cognito-custom-message-service/tsconfig.app.json",
+          "hash": "6168933971257732142"
+        },
+        {
+          "file": "apps/misc/cognito-custom-message-service/tsconfig.json",
+          "hash": "14915891520600804235"
+        },
+        {
+          "file": "apps/misc/cognito-custom-message-service/tsconfig.spec.json",
+          "hash": "2924590645906076043"
+        },
+        {
+          "file": "apps/misc/cognito-custom-message-service/webpack.config.js",
+          "hash": "2110091796888809332",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "configuration-lib": [
+        {
+          "file": "libs/backend/configuration-lib/README.md",
+          "hash": "4769563176167814522"
+        },
+        {
+          "file": "libs/backend/configuration-lib/eslint.config.js",
+          "hash": "11841079831973943732"
+        },
+        {
+          "file": "libs/backend/configuration-lib/project.json",
+          "hash": "16657138814637737038"
+        },
+        {
+          "file": "libs/backend/configuration-lib/src/index.ts",
+          "hash": "3552503086138066713"
+        },
+        {
+          "file": "libs/backend/configuration-lib/src/lib/config/configuration.ts",
+          "hash": "1059866314444435072",
+          "deps": [
+            "aws-secret-manager-lib"
+          ]
+        },
+        {
+          "file": "libs/backend/configuration-lib/src/lib/configuration-lib.module.ts",
+          "hash": "1137182765472359624",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "libs/backend/configuration-lib/src/lib/configuration-lib.service.ts",
+          "hash": "2802020567920177771",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/configuration-lib/tsconfig.json",
+          "hash": "11694468379504486425"
+        },
+        {
+          "file": "libs/backend/configuration-lib/tsconfig.lib.json",
+          "hash": "17941572995728499288"
+        }
+      ],
+      "email-api-service": [
+        {
+          "file": "apps/misc/email-api-service/jest.config.ts",
+          "hash": "6699059058335299290"
+        },
+        {
+          "file": "apps/misc/email-api-service/project.json",
+          "hash": "16177763839862696328"
+        },
+        {
+          "file": "apps/misc/email-api-service/src/app/app.controller.spec.ts",
+          "hash": "13081227780612210744",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/misc/email-api-service/src/app/app.controller.ts",
+          "hash": "4938041403842933731",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/platform-express",
+            "npm:@nestjs/swagger",
+            "dto",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/misc/email-api-service/src/app/app.module.ts",
+          "hash": "10970897724431899016",
+          "deps": [
+            "npm:@nestjs/common",
+            "aws-ses-lib",
+            "npm:@nestjs/config",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/misc/email-api-service/src/app/app.service.spec.ts",
+          "hash": "18278639153968026239",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/misc/email-api-service/src/app/app.service.ts",
+          "hash": "7653932249302388706",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/misc/email-api-service/src/app/commands/send.email/send.email.command.ts",
+          "hash": "7372113799081866700"
+        },
+        {
+          "file": "apps/misc/email-api-service/src/app/commands/send.email/send.email.handler.ts",
+          "hash": "14975867195702129509",
+          "deps": [
+            "aws-ses-lib",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/misc/email-api-service/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/misc/email-api-service/src/main.ts",
+          "hash": "15954749606951956997",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/swagger",
+            "npm:@codegenie/serverless-express",
+            "npm:express",
+            "npm:@nestjs/platform-express"
+          ]
+        },
+        {
+          "file": "apps/misc/email-api-service/tsconfig.app.json",
+          "hash": "6168933971257732142"
+        },
+        {
+          "file": "apps/misc/email-api-service/tsconfig.json",
+          "hash": "14915891520600804235"
+        },
+        {
+          "file": "apps/misc/email-api-service/tsconfig.spec.json",
+          "hash": "2924590645906076043"
+        },
+        {
+          "file": "apps/misc/email-api-service/webpack.config.js",
+          "hash": "13866866160125293377",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "authentication-api-service": [
+        {
+          "file": "apps/authentication/authentication-api-service/eslint.config.js",
+          "hash": "11841079831973943732"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/jest.config.ts",
+          "hash": "16903784673729246730"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/project.json",
+          "hash": "160006053207876189"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/app/app.controller.spec.ts",
+          "hash": "13081227780612210744",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/app/app.controller.ts",
+          "hash": "8194742152470293406",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/app/app.module.ts",
+          "hash": "15841962706699293960",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/app/app.service.spec.ts",
+          "hash": "18278639153968026239",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/app/app.service.ts",
+          "hash": "7653932249302388706",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/authentication.controller.ts",
+          "hash": "17582862375918193530",
+          "deps": [
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs",
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/authentication.module.ts",
+          "hash": "16158850724970686697",
+          "deps": [
+            "aws-cognito-lib",
+            "configuration-lib",
+            "dynamo-db-lib",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/admin.create.user/admin.create.user.command.ts",
+          "hash": "1147534114550143637"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/admin.create.user/admin.create.user.handler.spec.ts",
+          "hash": "18414962013485063247",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/admin.create.user/admin.create.user.handler.ts",
+          "hash": "10931669379564527636",
+          "deps": [
+            "aws-cognito-lib",
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/change.password/change.password.command.ts",
+          "hash": "203032677218739073"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/change.password/change.password.handler.spec.ts",
+          "hash": "1039261474125687271",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/change.password/change.password.handler.ts",
+          "hash": "16714821648815061083",
+          "deps": [
+            "aws-cognito-lib",
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/complete.new.password/complete.new.password.command.ts",
+          "hash": "9754927259028359647"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/complete.new.password/complete.new.password.handler.spec.ts",
+          "hash": "12172736283049038193",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/complete.new.password/complete.new.password.handler.ts",
+          "hash": "16453968362445161640",
+          "deps": [
+            "aws-cognito-lib",
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/confirm.password.code/confirm.password.code.command.ts",
+          "hash": "8659063867380639659"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/confirm.password.code/confirm.password.code.handler.spec.ts",
+          "hash": "6003979257342662752",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/confirm.password.code/confirm.password.code.handler.ts",
+          "hash": "13331676431242809598",
+          "deps": [
+            "aws-cognito-lib",
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/confirm.user/confirm.user.command.ts",
+          "hash": "5624692129765797344"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/confirm.user/confirm.user.handler.spec.ts",
+          "hash": "17794317893272916437",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/confirm.user/confirm.user.handler.ts",
+          "hash": "9559767923834245330",
+          "deps": [
+            "aws-cognito-lib",
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/delete.user/delete.user..handler.ts",
+          "hash": "11500466747087499986",
+          "deps": [
+            "aws-cognito-lib",
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/delete.user/delete.user.command.ts",
+          "hash": "10109535782358975574"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/delete.user/delete.user.handler.spec.ts",
+          "hash": "13943467570743856522",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/forgot.password/forgot.password.command.ts",
+          "hash": "689897828062376147"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/forgot.password/forgot.password.handler.spec.ts",
+          "hash": "13995922753949784031",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/forgot.password/forgot.password.handler.ts",
+          "hash": "7051337446245057738",
+          "deps": [
+            "aws-cognito-lib",
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/generate.token/generate.token.command.ts",
+          "hash": "2702755348097852287"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/generate.token/generate.token.handler.spec.ts",
+          "hash": "2639502697790732713",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/generate.token/generate.token.handler.ts",
+          "hash": "14782934941793820013",
+          "deps": [
+            "aws-cognito-lib",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/login/login.command.ts",
+          "hash": "16033478173979244538"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/login/login.handler.spec.ts",
+          "hash": "4923795815200341771",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/login/login.handler.ts",
+          "hash": "13744918586087487495",
+          "deps": [
+            "aws-cognito-lib",
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/resend.confirmation.code/resend.confirmation.code.command.ts",
+          "hash": "10641719158500701178"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/resend.confirmation.code/resend.confirmation.code.handler.spec.ts",
+          "hash": "17019500834747215727",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/resend.confirmation.code/resend.confirmation.code.handler.ts",
+          "hash": "1212094281309966622",
+          "deps": [
+            "aws-cognito-lib",
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/resend.invitation/resend.invitation.command.ts",
+          "hash": "5951046962477298986"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/resend.invitation/resend.invitation.handler.spec.ts",
+          "hash": "9633310575940628827",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/resend.invitation/resend.invitation.handler.ts",
+          "hash": "13315424342331196393",
+          "deps": [
+            "aws-cognito-lib",
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/sign.up.user/sign.up.user.command.ts",
+          "hash": "14411101255627324308"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/sign.up.user/sign.up.user.handler.spec.ts",
+          "hash": "17374161598187526787",
+          "deps": [
+            "dto",
+            "message-queue-lib",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/authentication/commands/sign.up.user/sign.up.user.handler.ts",
+          "hash": "15288029303916899145",
+          "deps": [
+            "aws-cognito-lib",
+            "npm:@aws-sdk/client-cognito-identity-provider",
+            "dto",
+            "npm:@nestjs/common",
+            "npm:@nestjs/cqrs"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/src/main.ts",
+          "hash": "2092251336125298210",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/swagger",
+            "npm:@codegenie/serverless-express",
+            "npm:express",
+            "npm:@nestjs/platform-express"
+          ]
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/tsconfig.app.json",
+          "hash": "6168933971257732142"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/tsconfig.json",
+          "hash": "14915891520600804235"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/tsconfig.spec.json",
+          "hash": "2924590645906076043"
+        },
+        {
+          "file": "apps/authentication/authentication-api-service/webpack.config.js",
+          "hash": "13298917370019890671",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "email-template-database-service": [
+        {
+          "file": "libs/backend/database-services/email-template-database-service/README.md",
+          "hash": "10519242712771076148"
+        },
+        {
+          "file": "libs/backend/database-services/email-template-database-service/eslint.config.js",
+          "hash": "2093890615893252868"
+        },
+        {
+          "file": "libs/backend/database-services/email-template-database-service/jest.config.ts",
+          "hash": "17711726289847235508"
+        },
+        {
+          "file": "libs/backend/database-services/email-template-database-service/project.json",
+          "hash": "11591433375019588527"
+        },
+        {
+          "file": "libs/backend/database-services/email-template-database-service/src/index.ts",
+          "hash": "333317496618539329"
+        },
+        {
+          "file": "libs/backend/database-services/email-template-database-service/src/lib/email-template-database-service.module.ts",
+          "hash": "9670828980078788561",
+          "deps": [
+            "configuration-lib",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "libs/backend/database-services/email-template-database-service/src/lib/email-template-database-service.spec.ts",
+          "hash": "10399132496985907208",
+          "deps": [
+            "npm:@nestjs/testing"
+          ]
+        },
+        {
+          "file": "libs/backend/database-services/email-template-database-service/src/lib/email-template-database-service.ts",
+          "hash": "2223309642872516921",
+          "deps": [
+            "dynamo-db-lib",
+            "npm:@nestjs/config",
+            "npm:@nestjs/common",
+            "npm:dynamodb-onetable",
+            "dto"
+          ]
+        },
+        {
+          "file": "libs/backend/database-services/email-template-database-service/tsconfig.json",
+          "hash": "3225153280592652337"
+        },
+        {
+          "file": "libs/backend/database-services/email-template-database-service/tsconfig.lib.json",
+          "hash": "14157418033892287268"
+        },
+        {
+          "file": "libs/backend/database-services/email-template-database-service/tsconfig.spec.json",
+          "hash": "4939860449784718704"
+        }
+      ]
+    }
+  }
+}

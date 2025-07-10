@@ -5,8 +5,6 @@ import { UserStatus } from './user.status.enum';
 import { UserDataDto } from './users.data.dto';
 
 export class UsersDto {
-
-
   @ApiProperty()
   @IsString()
   userId!: string;
