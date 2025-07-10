@@ -565,6 +565,25 @@
           "hash": "5074984133439531008"
         },
         {
+          "file": "libs/dto/src/lib/authors/authors.dto.ts",
+          "hash": "16616640695249367831",
+          "deps": [
+            "npm:@nestjs/swagger"
+          ]
+        },
+        {
+          "file": "libs/dto/src/lib/books/book.genre.enum.ts",
+          "hash": "17949805908225893721"
+        },
+        {
+          "file": "libs/dto/src/lib/books/books.dto.ts",
+          "hash": "3286512434219708199",
+          "deps": [
+            "npm:@nestjs/swagger",
+            "npm:class-validator"
+          ]
+        },
+        {
           "file": "libs/dto/src/lib/cognito/cognito.complete.newpassword.dto.ts",
           "hash": "6549377142562914780",
           "deps": [

@@ -25531,12 +25531,12 @@
       },
       {
         "source": "dto",
-        "target": "npm:@nestjs/common",
+        "target": "npm:class-validator",
         "type": "static"
       },
       {
         "source": "dto",
-        "target": "npm:class-validator",
+        "target": "npm:@nestjs/common",
         "type": "static"
       }
     ],
