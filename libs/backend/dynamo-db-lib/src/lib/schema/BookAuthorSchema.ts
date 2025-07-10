@@ -14,24 +14,24 @@ const BookAuthorSchema = {
     },
     models: {
         Book: {
-            PK: { type: 'string', value: 'BOOK#{id}', required: true },
-            SK: { type: 'string', required: true },
-            title: { type: 'string', required: true },
-            publisher: { type: 'string', required: true },
-            date_published: { type: 'string', required: true },
-            genres: { type: 'array', items: { type: 'string' }, required: true, },
-            GSI1PK: { type: 'string', value: 'AUTHOR#{id}', required: true },
+            PK: { type: String, value: 'BOOK#{id}', required: true },
+            SK: { type: String, required: true },
+            title: { type: String, required: true },
+            publisher: { type: String, required: true },
+            date_published: { type: String, required: true },
+            genres: { type: Array, items: { type: 'string' }, required: true, },
+            GSI1PK: { type: String, value: 'AUTHOR#{id}'},
         },
         Author: {
-            PK: { type: 'string', value: 'AUTHOR#{id}', required: true },
-            SK: { type: 'string', required: true },
-            name: { type: 'string', required: true },
-            GSI1PK: { type: 'string', value: 'BOOK#{id}', required: true },
+            PK: { type: String, value: 'AUTHOR#{id}', required: true },
+            SK: { type: String, required: true },
+            name: { type: String, required: true },
+            GSI1PK: { type: String, value: 'BOOK#{id}'},
         }
     },
 }
 
-type Book = Entity<typeof BookAuthorSchema.models.Book>
-type Author = Entity<typeof BookAuthorSchema.models.Author>
+type BookDataType = Entity<typeof BookAuthorSchema.models.Book>
+type AuthorDataType = Entity<typeof BookAuthorSchema.models.Author>
 
-export { Book, Author, BookAuthorSchema }
+export { BookDataType, AuthorDataType, BookAuthorSchema }

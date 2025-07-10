@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger"
-import { Genre } from "./book.genre.enum"
+import { Genre } from "./books.genre.enum"
 import { IsEnum } from "class-validator"
 
 export class BooksDto{

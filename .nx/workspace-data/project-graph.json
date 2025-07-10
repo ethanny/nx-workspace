@@ -93,6 +93,61 @@
         "implicitDependencies": []
       }
     },
+    "author-database-service": {
+      "name": "author-database-service",
+      "type": "lib",
+      "data": {
+        "root": "libs/backend/database-services/author-database-service",
+        "targets": {
+          "lint": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/eslint.config.js",
+              "{projectRoot}/eslint.config.js",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint",
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "yarn eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "cwd": "libs/backend/database-services/author-database-service",
+              "command": "eslint ."
+            },
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "name": "author-database-service",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/backend/database-services/author-database-service/src",
+        "projectType": "library",
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
     "user-database-service": {
       "name": "user-database-service",
       "type": "lib",
@@ -24427,6 +24482,38 @@
       {
         "source": "email-template-database-service",
         "target": "dto",
+        "type": "static"
+      }
+    ],
+    "author-database-service": [
+      {
+        "source": "author-database-service",
+        "target": "dto",
+        "type": "static"
+      },
+      {
+        "source": "author-database-service",
+        "target": "npm:@nestjs/common",
+        "type": "static"
+      },
+      {
+        "source": "author-database-service",
+        "target": "configuration-lib",
+        "type": "static"
+      },
+      {
+        "source": "author-database-service",
+        "target": "npm:dynamodb-onetable",
+        "type": "static"
+      },
+      {
+        "source": "author-database-service",
+        "target": "dynamo-db-lib",
+        "type": "static"
+      },
+      {
+        "source": "author-database-service",
+        "target": "npm:@aws-sdk/client-dynamodb",
         "type": "static"
       }
     ],

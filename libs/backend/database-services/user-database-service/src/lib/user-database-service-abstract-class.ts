@@ -1,6 +1,7 @@
 import { CreateUserDto, PageDto, UsersDto } from '@dto';
 
 export abstract class UserDatabaseServiceAbstract {
+    
 
     abstract createRecord(userDto: CreateUserDto): Promise<UsersDto>;
 

@@ -44,3 +44,7 @@ export * from './lib/vortex/enums/firmware.update.status.enum';
 export * from './lib/vortex/enums/camera.status.enum';
 export * from './lib/vortex/enums/status.enum';
 
+//Books and authors
+export * from './lib/authors/authors.dto';
+export * from './lib/books/books.dto';
+export * from './lib/books/books.genre.enum';
